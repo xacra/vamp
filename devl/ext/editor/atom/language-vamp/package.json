@@ -1,0 +1,14 @@
+{
+  "name": "language-vamp",
+  "version": "0.1.0",
+  "description": "Vamp Language Syntax",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/xacra/vamp/tree/master/devl/ext/editor/atom/language-vamp",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

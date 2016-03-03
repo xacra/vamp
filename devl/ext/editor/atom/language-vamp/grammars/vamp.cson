@@ -1,0 +1,229 @@
+
+'scopeName' : 'source.vamp'
+'name'      : 'Vamp'
+
+
+'fileTypes' : [
+  'v'
+]
+
+
+'patterns': [
+
+   {
+    'include': '#comments'
+   }
+   {
+    'include': '#operators'
+   }
+   {
+    'include': '#method_call'
+   }
+   {
+    'include': '#properties'
+   }
+   {
+    'include': '#numbers'
+   }
+   {
+    'include': '#strings'
+   }
+
+   {
+    'match': '\\A#!.*$'
+    'name': 'comment.line.shebang.js'
+   }
+
+   {
+    'match': '{|}'
+    'name': 'meta.brace.curly.js'
+   }
+   {
+    'match': '\\(|\\)'
+    'name': 'meta.brace.round.js'
+   }
+   {
+    'match': '\\[|\\]'
+    'name': 'meta.brace.square.js'
+   }
+
+   {
+    'match': '\\b(None|Vbit|Nume|Data|List|Node|Fail|Tick|Bios|VoidNone|TrueVbit|BareVbit|FalsVbit|BareNume|UnitNume|FracNume|RateNume|VbitData|NumeData|TextData|ListData|NodeData|HardData|BiosData|BareList|FlatList|TreeList|BareNode|FlatNode|TreeNode|FuncNode|TimeTick|BiosTick|PathBios|SockBios|UserBios|ProcBios)\\b'
+    'name': 'keyword.control.js'
+   }
+
+   {
+    'match': '(@)[0-9A-Za-z]+'
+    'name': 'support.class.js'
+   }
+
+   {
+    'match': '(\\$)[0-9A-Za-z]+'
+    'name': 'variable.language.js'
+   }
+
+]
+'repository':
+  'comments':
+    'patterns': [
+
+      {
+        'begin': '(//)|(\\\\\\\\)|(\\.:)|(:\\.)|(::)|(#!)|(# )|(##)|(\\*\\*\\*)|(```)|(===)|(---)|(\\.\\.\\.)'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.js'
+        'end': '\\n'
+        'name': 'comment.line.double-slash.js'
+      }
+
+      {
+        'begin': '(^-- )|(^--\n)'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.js'
+        'end': '(^-- )|(^--\n)|( --\n)|(::\n)'
+        'name': 'comment.block.documentation.js'
+      }
+
+      {
+        'begin': '/\\*'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.js'
+        'end': '\\*/'
+        'name': 'comment.block.js'
+      }
+
+    ]
+
+  'numbers':
+    'patterns': [
+
+      {
+        'match': '\\b(?<!\\$|_)([0-9]+(\\.[0-9]+)?)\\b'
+        'name': 'constant.numeric.js'
+      }
+
+      {
+        'match': '(#[0-9A-Z]+(\\.[0-9A-Z]+)?)'
+        'name': 'string.regexp.js'
+      }
+
+    ]
+
+  'strings':
+    'patterns': [
+      {
+        'begin': '\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.js'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.js'
+        'name': 'string.quoted.single.js'
+        'patterns': [
+          {
+            'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
+            'name': 'constant.character.escape.js'
+          }
+          {
+            'match': "[^']*[^\\n\\r'\\\\]$"
+            'name': 'invalid.illegal.string.js'
+          }
+        ]
+      }
+      {
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.js'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.js'
+        'name': 'string.quoted.double.js'
+        'patterns': [
+          {
+            'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)'
+            'name': 'constant.character.escape.js'
+          }
+          {
+            'match': '[^"]*[^\\n\\r"\\\\]$'
+            'name': 'invalid.illegal.string.js'
+          }
+        ]
+      }
+      {
+        'begin': '`'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.js'
+        'end': '`'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.js'
+        'name': 'string.quoted.template.js'
+        'patterns': [
+          {
+            'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
+            'name': 'constant.character.escape.js'
+          }
+          {
+            'include': '#interpolated_js'
+          }
+        ]
+      }
+    ]
+
+  'interpolated_js':
+    'patterns': [
+      {
+        'begin': '\\$\\{'
+        'captures':
+          '0':
+            'name': 'punctuation.section.embedded.js'
+        'end': '\\}'
+        'name': 'source.js.embedded.source'
+        'patterns': [
+          {
+            'begin': '{'
+            'beginCaptures':
+              '0':
+                'name': 'meta.brace.curly.js'
+            'end': '}'
+            'endCaptures':
+              '0':
+                'name': 'meta.brace.curly.js'
+            'patterns': [
+              {
+                'include': '$self'
+              }
+            ]
+          }
+          {
+            'include': '$self'
+          }
+        ]
+      }
+    ]
+
+  'properties':
+    'patterns': [
+      {
+        'comment': '`prop` in `obj.prop`, `func().prop`'
+        'match': '(\\.)\\s*(?:(\\b\\d\\w*)|(IsType|IsKind)|([A-Z][A-Z0-9_$]*\\b\\$*)|([\\w$]*))'
+        'captures':
+          '1':
+            'name': 'meta.delimiter.property.period.js'
+          '2':
+            'name': 'invalid.illegal.js'
+          '3':
+            'name': 'support.function.js'
+          '4':
+            'name': 'constant.other.property.js'
+          '5':
+            'name': 'variable.other.property.js'
+      }
+    ]
