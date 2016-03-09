@@ -11,7 +11,7 @@
 
 This "README" is used for latest information such "news" and "changelog".
 
-For **installation** instructions and the **VAMP manual**, see the documentation here:
+For **installation** instructions and the **VAMP manual**, see the documentation here: https://github.com/xacra/vamp/tree/master/dist/doc
 
 
 <br><br>
