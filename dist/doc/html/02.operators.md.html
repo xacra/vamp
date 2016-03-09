@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>02.operators</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); overflow: auto; background-color: rgb(29, 31, 33); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); background-color: rgb(48, 51, 55); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-preview code { text-shadow: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+pre.editor-colors,
+.host {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
+}
+pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #292c2f;
+}
+pre.editor-colors .gutter .cursor-line,
+.host .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .line-number.cursor-line-no-selection,
+.host .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #fba0e3;
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-color: #ffffff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #444444;
+}
+pre.editor-colors .source.gfm,
+.host .source.gfm {
+  color: #999;
+}
+pre.editor-colors .gfm .markup.heading,
+.host .gfm .markup.heading {
+  color: #eee;
+}
+pre.editor-colors .gfm .link,
+.host .gfm .link {
+  color: #555;
+}
+pre.editor-colors .gfm .variable.list,
+.host .gfm .variable.list,
+pre.editor-colors .gfm .support.quote,
+.host .gfm .support.quote {
+  color: #555;
+}
+pre.editor-colors .gfm .link .entity,
+.host .gfm .link .entity {
+  color: #ddd;
+}
+pre.editor-colors .gfm .raw,
+.host .gfm .raw {
+  color: #aaa;
+}
+pre.editor-colors .markdown .paragraph,
+.host .markdown .paragraph {
+  color: #999;
+}
+pre.editor-colors .markdown .heading,
+.host .markdown .heading {
+  color: #eee;
+}
+pre.editor-colors .markdown .raw,
+.host .markdown .raw {
+  color: #aaa;
+}
+pre.editor-colors .markdown .link,
+.host .markdown .link {
+  color: #555;
+}
+pre.editor-colors .markdown .link .string,
+.host .markdown .link .string {
+  color: #555;
+}
+pre.editor-colors .markdown .link .string.title,
+.host .markdown .link .string.title {
+  color: #ddd;
+}
+.bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}
+.comment {
+  color: #7C7C7C;
+}
+.entity {
+  color: #FFD2A7;
+}
+.entity.name.type {
+  text-decoration: underline;
+  color: #FFFFB6;
+}
+.entity.other.inherited-class {
+  color: #9B5C2E;
+}
+.keyword {
+  color: #96CBFE;
+}
+.keyword.control {
+  color: #96CBFE;
+}
+.keyword.operator {
+  color: #EDEDED;
+}
+.storage {
+  color: #CFCB90;
+}
+.storage.modifier {
+  color: #96CBFE;
+}
+.constant {
+  color: #99CC99;
+}
+.constant.numeric {
+  color: #FF73FD;
+}
+.variable {
+  color: #C6C5FE;
+}
+.invalid.deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.invalid.illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.string .source,
+.string .meta.embedded.line {
+  color: #EDEDED;
+}
+.string .punctuation.section.embedded {
+  color: #00A0A0;
+}
+.string .punctuation.section.embedded .source {
+  color: #00A0A0;
+}
+.string {
+  color: #A8FF60;
+}
+.string .constant {
+  color: #00A0A0;
+}
+.string.regexp {
+  color: #E9C062;
+}
+.string.regexp .constant.character.escape,
+.string.regexp .source.ruby.embedded,
+.string.regexp .string.regexp.arbitrary-repetition {
+  color: #FF8000;
+}
+.string.regexp.group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.string.regexp.character-class {
+  color: #B18A3D;
+}
+.string .variable {
+  color: #8A9A95;
+}
+.support {
+  color: #FFFFB6;
+}
+.support.function {
+  color: #DAD085;
+}
+.support.constant {
+  color: #FFD2A7;
+}
+.support.type.property-name.css {
+  color: #EDEDED;
+}
+.source .entity.name.tag,
+.source .punctuation.tag {
+  color: #96CBFE;
+}
+.source .entity.other.attribute-name {
+  color: #C6C5FE;
+}
+.entity.other.attribute-name {
+  color: #C6C5FE;
+}
+.entity.name.tag.namespace,
+.entity.other.attribute-name.namespace {
+  color: #E18964;
+}
+.meta.preprocessor.c {
+  color: #8996A8;
+}
+.meta.preprocessor.c .keyword {
+  color: #AFC4DB;
+}
+.meta.cast {
+  color: #676767;
+}
+.meta.sgml.html .meta.doctype,
+.meta.sgml.html .meta.doctype .entity,
+.meta.sgml.html .meta.doctype .string,
+.meta.xml-processing,
+.meta.xml-processing .entity,
+.meta.xml-processing .string {
+  color: #494949;
+}
+.meta.tag .entity,
+.meta.tag > .punctuation,
+.meta.tag.inline .entity {
+  color: #C6C5FE;
+}
+.meta.tag .name,
+.meta.tag.inline .name,
+.meta.tag > .punctuation {
+  color: #96CBFE;
+}
+.meta.selector.css .entity.name.tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.meta.selector.css .entity.other.attribute-name.tag.pseudo-class {
+  color: #8F9D6A;
+}
+.meta.selector.css .entity.other.attribute-name.id {
+  color: #8B98AB;
+}
+.meta.selector.css .entity.other.attribute-name.class {
+  color: #62B1FE;
+}
+.meta.property-group .support.constant.property-value.css,
+.meta.property-value .support.constant.property-value.css {
+  color: #F9EE98;
+}
+.meta.preprocessor.at-rule .keyword.control.at-rule {
+  color: #8693A5;
+}
+.meta.property-value .support.constant.named-color.css,
+.meta.property-value .constant {
+  color: #87C38A;
+}
+.meta.constructor.argument.css {
+  color: #8F9D6A;
+}
+.meta.diff,
+.meta.diff.header {
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.meta.separator {
+  color: #60A633;
+  background-color: #242424;
+}
+.meta.line.entry.logfile,
+.meta.line.exit.logfile {
+  background-color: rgba(238, 238, 238, 0.16);
+}
+.meta.line.error.logfile {
+  background-color: #751012;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><style>
+   body
+   {
+      font-family: Arial, Helvitica, Sans;
+      font-size:12px !important;
+      background: url('../../art/img/bg_texture.jpg') !important;
+   }
+
+   hr
+   { border: none; }
+
+   .frame
+   {
+      display: inline-block;
+      background: rgba(100,100,100,0.15);
+      padding:12px;
+      text-align:center;
+      vertical-align:top;
+      border: 1px solid rgba(128,128,128,0.3);
+      border-radius: 5px;
+      margin: 15px;
+   }
+
+   .span
+   { display:block; }
+
+   .info
+   {
+      display:block;
+      font-style:italic;
+      font-size:12px;
+      padding-left:15px;
+   }
+
+   .bigTxt
+   {
+      display:inline-block;
+      vertical-align:top;
+      font-size:40px;
+      line-height:60px;
+      padding-left:10px;
+      padding-right:10px;
+   }
+</style>
+
+
+<h1 id="vamp">VAMP</h1>
+<h4 id="v-e-r-s-a-t-i-l-e-nbsp-nbsp-a-p-p-l-i-c-a-t-i-o-n-nbsp-nbsp-m-e-t-a-p-r-o-g-r-a-m-m-i-n-g">V e r s a t i l e &nbsp;&nbsp; A p p l i c a t i o n &nbsp;&nbsp; M e t a - P r o g r a m m i n g</h4>
+<hr>
+<p><br></p>
+<h2 id="operators">Operators</h2>
+<p><br>
+The operators in VAMP are categorized in terms of usage. These are:</p>
+<ul>
+<li>comment</li>
+<li>context</li>
+<li>delimit</li>
+<li>reference</li>
+<li>logical</li>
+<li>arithmetic</li>
+</ul>
+<p>This document is for referenece purposes and will be covered in more detail later.
+<br><br></p>
+<h4 id="comment-operators">Comment Operators</h4>
+<p>Comment in VAMP is used both for documentation and developer reference. The porpose of all these comments is to have code look well explained, and has the ability to make <code style="font-family: Liberation Mono;">Markdown</code> -or HTML documentation from VAMP files.
+It is recommended to &quot;minify&quot; your code when publishing to a live environment as this speeds up loading &amp; parsing, not only for VAMP, but with any other language or library commonly used.</p>
+<p>These are the comment operators:</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="comment block documentation js"><span class="punctuation definition comment js"><span>--&nbsp;</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double-dash(+space)&nbsp;&nbsp;block-comment,&nbsp;used&nbsp;at&nbsp;line&nbsp;start,&nbsp;ends&nbsp;with&nbsp;itself&nbsp;or&nbsp;`::(+newline)`</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hashtag(+space)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-comment,&nbsp;used&nbsp;anywhere</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double-tag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-comment,&nbsp;used&nbsp;anywhere</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>#!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shebang&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-comment,&nbsp;used&nbsp;at&nbsp;doc&nbsp;start</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>!#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bangshe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-comment,&nbsp;used&nbsp;anywhere,&nbsp;or&nbsp;for&nbsp;documentation&nbsp;as&nbsp;highligted&nbsp;tags</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>.:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secton-begin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-comment,&nbsp;used&nbsp;for:&nbsp;`section&nbsp;start`,&nbsp;or:&nbsp;`thus`</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>::&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double-colon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-comment,&nbsp;used&nbsp;anywhere,&nbsp;or&nbsp;section&nbsp;end</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double-FWD-slash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;comment,&nbsp;used&nbsp;anywhere,&nbsp;or&nbsp;section&nbsp;start</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>\\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double-BCK-slash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;comment,&nbsp;used&nbsp;anywhere,&nbsp;or&nbsp;section&nbsp;end</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>---&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;triple-dash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-comment,&nbsp;used&nbsp;for&nbsp;code&nbsp;-or&nbsp;comment-block&nbsp;separation</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>/*&nbsp;*/&nbsp;&nbsp;&nbsp;&nbsp;slash-star&nbsp;pair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block-comment,&nbsp;used&nbsp;anywhere</span></span></span></div></pre>
+<p>&quot;Line-comment&quot; is typically ended with a <code style="font-family: Liberation Mono;">newline</code> character, but &quot;block-comment&quot; is typically ended with a pairing sequence, as shown above.
+The <code style="font-family: Liberation Mono;">bangshe</code> (or &quot;banshee&quot;) line-comment can be used in both coding &amp; documentation as it has the same effect, wich is to highlight certain key-words and let the accompanying text stand out from the rest. The &quot;accompanying text&quot; can be whatever the developer types in there; the &quot;quoted text&quot; below is only an indication of what the key-word could mean; however, if no text is typed next to these key-words, then the quoted text below will be used instead.</p>
+<p>The words &amp; colours of these can be tuned, but the defaults are:</p>
+<ul>
+<li><code style="font-family: Liberation Mono;">TODO</code> - dark grey - &quot;to be done in the future&quot;</li>
+<li><code style="font-family: Liberation Mono;">TEST</code> - green - &quot;not thouroghly tested yet&quot;</li>
+<li><code style="font-family: Liberation Mono;">HELP</code> - pink - &quot;i need help with this&quot;</li>
+<li><code style="font-family: Liberation Mono;">NEED</code> - purple - &quot;the specification -or technology needs to be updated&quot;</li>
+<li><code style="font-family: Liberation Mono;">DONE</code> - blue - &quot;completed and tested&quot;</li>
+<li><code style="font-family: Liberation Mono;">BUSY</code> - orange - &quot;work in progress&quot;</li>
+<li><code style="font-family: Liberation Mono;">WARN</code> - orange - &quot;it could work but may fail under specific circumstances&quot;</li>
+<li><code style="font-family: Liberation Mono;">HACK</code> - orange - &quot;working but not properly done and may have side effects&quot;</li>
+<li><code style="font-family: Liberation Mono;">FAIL</code> - red - &quot;broken, fix this -or remove it to prevent issues&quot;</li>
+<li><code style="font-family: Liberation Mono;">VOID</code> - black - &quot;deprecated - do not use in the future&quot;</li>
+</ul>
+<p>Below is an example of how to use these comments resulting in well documented code.</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>#!</span></span><span>/usr/bin/vamp</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>---</span></span><span>-------------------</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v0.1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>---</span></span><span>-------------------</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>##</span></span><span>&nbsp;Heading</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span class="punctuation definition comment js"><span>--</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>&nbsp;&nbsp;&nbsp;Documentation&nbsp;paragraph&nbsp;with&nbsp;some&nbsp;**bold**&nbsp;text</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span class="punctuation definition comment js"><span>--</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>!#</span></span><span>&nbsp;</span><span class="storage type class todo"><span>TODO</span></span><span>&nbsp;:&nbsp;not&nbsp;implemented&nbsp;yet</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>.:</span></span><span>&nbsp;bgn&nbsp;section&nbsp;:.</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span class="punctuation definition comment js"><span>--&nbsp;</span></span><span>-----------------------------------------------------------</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>&nbsp;&nbsp;&nbsp;documentaion&nbsp;stuff</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span class="punctuation definition comment js"><span>--&nbsp;</span></span></span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>---</span></span><span>--------------------------------------------------------</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="string quoted double js"><span class="punctuation definition string begin js"><span>&quot;</span></span><span>Hello&nbsp;world!</span><span class="punctuation definition string end js"><span>&quot;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span class="punctuation definition comment js"><span>--&nbsp;</span></span><span>-----------------------------------------------------------</span></span></span></div><div class="line"><span class="source vamp"><span class="comment block documentation js"><span>::&nbsp;end&nbsp;section&nbsp;</span><span class="punctuation definition comment js"><span>::</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>//</span></span><span>&nbsp;begin&nbsp;section&nbsp;--&nbsp;quick,&nbsp;but&nbsp;not&nbsp;so&nbsp;pretty&nbsp;as&nbsp;above</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>---</span></span><span>--------------------------------------------------------</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="string quoted double js"><span class="punctuation definition string begin js"><span>&quot;</span></span><span>Hello&nbsp;world!</span><span class="punctuation definition string end js"><span>&quot;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>---</span></span><span>--------------------------------------------------------</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>\\</span></span><span>&nbsp;end&nbsp;section</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div></pre>
+<p><br><br></p>
+<h4 id="context-operators">Context Operators</h4>
+<p>The importance of &quot;context&quot; in VAMP is paramount as it defines what any statement -or expression means or implies and to what it applies - and in which scope it can be valid. Comment operators also define a &quot;context&quot; but the contents inside the &quot;comment context&quot; is ignored during runtime.<br>
+Your project structure in folders and files define context (scope), as well as the following operators:</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="meta brace round js"><span>(</span></span><span>&nbsp;</span><span class="meta brace round js"><span>)</span></span><span>&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;wrap,&nbsp;express,&nbsp;calculate,&nbsp;call</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>[</span></span><span>&nbsp;</span><span class="meta brace square js"><span>]</span></span><span>&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;wrap,&nbsp;list,&nbsp;contain</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>{</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span>&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;wrap,&nbsp;describe</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="string quoted double js"><span class="punctuation definition string begin js"><span>&quot;</span></span><span>&nbsp;</span><span class="punctuation definition string end js"><span>&quot;</span></span></span><span>&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;text,&nbsp;quoted&nbsp;-&nbsp;unformatted&nbsp;plain&nbsp;text&nbsp;-&nbsp;single-line</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>&nbsp;</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span>&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;text,&nbsp;quoted&nbsp;-&nbsp;unformatted&nbsp;plain&nbsp;text&nbsp;-&nbsp;single-line</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>&nbsp;</span><span class="punctuation definition string end js"><span>`</span></span></span><span>&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;text,&nbsp;quoted&nbsp;-&nbsp;formatted&nbsp;text,&nbsp;multi-line,&nbsp;embedded&nbsp;values&nbsp;&amp;&nbsp;expressions</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div></pre>
+<p><br><br></p>
+<h4 id="delimit-operators">Delimit Operators</h4>
+<p>As with any (normal) language, &quot;spaces&quot; devide &quot;randomtext&quot; into &quot;some words&quot;. The same applies here, but just with different punctuation. As with some languages, like &quot;Python&quot;, VAMP does not completely ignore &quot;white-space&quot;.<br>
+White-space delimit text into lists &amp; statements where appropriate.<br>
+List and statement delimitation does not apply to &quot;quoted text&quot;, except when this text is to be parsed.</p>
+<p>From the VAMP interpreter&#39;s perspective: any comment is ignored and the white-space at the beginning and ending of any context (except quoted text) is removed. Any white-space remaining is reduced to a single white-space character.
+This is important because in VAMP a white-space character is a delimiter.</p>
+<p>VAMP does not require commas -or semi-colons between list items and statements - ONLY if these are separated by white-space. Examples will follow later, but for now, remember that VAMP compiles (or transpiles) into other forms where the &quot;implied&quot; items &amp; statements are realized and treated accordingly. When the compiler minifies VAMP code it fixes the delimiters accordingly.</p>
+<p>Speaking of lists; &quot;text&quot; is a list of characters (a character &quot;string&quot;), hence list operations are natural to text.<br>
+This brings us to: <code style="font-family: Liberation Mono;">indexing</code>.</p>
+<p>Indexing in VAMP starts with 1 (NOT 0) and applies to reverse lookup also. This solves a lot of common problems - especially in boolean truth comparisson where &quot;something found&quot; appears first in the list, -or the first item from the end of a list (or text).<br>
+Having to do extra calculations when coding just to compensate for that zero&#39;th key, or to calculate the length of a list just to get to the last item - is insane, and, negative zero is a bit crazy, so, it&#39;s important to remember as it will save you a lot of headache.</p>
+<p>The following delimiters are valid:</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;comma</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;semi-colon</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;white-space</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div></pre>
+<p><br><br></p>
+<h4 id="reference-operators">Reference Operators</h4>
+<p>VAMP&#39;s reference operators together with the context-operators and inheritable meta-attributes are very powerful; you can do a lot more with less code. This does not nescessarily mean it is slow, because VAMP does not (normally) pass whole data structures around, but rather creates pointers to these structures in memory and passes the pointers around instead.</p>
+<p>The following operators are used as reference operators:</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>:</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;&nbsp;&nbsp;-&nbsp;name&nbsp;is&nbsp;value,&nbsp;where&nbsp;&quot;value&quot;&nbsp;is&nbsp;in&nbsp;the&nbsp;context&nbsp;of&nbsp;&quot;name&quot;</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;self&nbsp;-&nbsp;aspects&nbsp;of&nbsp;an&nbsp;entity</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>@</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;&nbsp;&nbsp;-&nbsp;point&nbsp;&quot;at&quot;,&nbsp;or&nbsp;&quot;in&quot;,&nbsp;to&nbsp;find&nbsp;or&nbsp;retrieve</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="meta delimiter property period js"><span>.</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&#39;s&nbsp;&nbsp;&nbsp;-&nbsp;as&nbsp;in:&nbsp;&quot;Dog&#39;s&nbsp;balls&quot;&nbsp;&nbsp;in&nbsp;code:&nbsp;&nbsp;Dog.balls</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div></pre>
+<p><br></p>
+<p>Here are a few examples of how to use the operators above:</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span>foo</span><span class="keyword operator $1 js"><span>:</span></span><span>bar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;{foo:&#39;bar&#39;}</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>bar</span><span class="keyword operator $1 js"><span>:</span></span><span>foo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;{bar:&#39;foo&#39;}</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>bar</span><span class="keyword operator $1 js"><span>:</span></span><span class="variable language js"><span>$foo</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;{bar:&#39;bar&#39;}</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>bar</span><span class="keyword operator $1 js"><span>:</span></span><span>$</span><span class="meta delimiter property period js"><span>.</span></span><span class="variable other property js"><span>foo</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;{bar:&#39;bar&#39;}</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>foo</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace round js"><span>)</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>bar</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace round js"><span>)</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;{foo:&#39;bar&#39;}</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span class="meta brace round js"><span>(</span></span><span>foo</span><span class="meta delimiter property period js"><span>.</span></span><span class="support constant js"><span>Name</span></span><span>&nbsp;</span><span class="keyword operator $1 js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>Var</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace round js"><span>)</span></span><span class="keyword operator $1 js"><span>:</span></span><span>bar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;{fooVar:&#39;bar&#39;}</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div></pre>
+<p><br><br></p>
+<h4 id="logical-operators">Logical Operators</h4>
+<p>In VAMP, &quot;logical operators&quot; &amp; &quot;arithmetic operators&quot; must be delimited from text by white-space; else they are just plain text.<br>
+Remember that VAMP expressions are always evaluated from left to right, no exceptions (not even multiply).
+If you need part of an expression to take precedence you need to enclose it inside (any) context operators.</p>
+<p>Truth in VAMP is calculated logically. Since we need not worry about &quot;zero&#39;th&quot; keys it is safe to assume that the following is logically false: <code style="font-family: Liberation Mono;">undefined</code>,<code style="font-family: Liberation Mono;">null</code>,<code style="font-family: Liberation Mono;">0</code>,<code style="font-family: Liberation Mono;">empty</code>,<code style="font-family: Liberation Mono;">error</code>,<code style="font-family: Liberation Mono;">false</code> - anything else is logically true.<br>
+We will get to the &quot;data types&quot; in a bit; the &quot;logically false&quot; references above are not part of the data-types, so you don&#39;t need to remember them, just that those kinds of things are &quot;logically false&quot; and anything else is &quot;logically true&quot;.<br></p>
+<p>Here are the logical operators:</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>?</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;IF&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;boolean&nbsp;truth&nbsp;confirm</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;choose&nbsp;the&nbsp;first&nbsp;boolean&nbsp;true&nbsp;comparable&nbsp;value,&nbsp;&quot;this&nbsp;OR&nbsp;that&nbsp;OR&nbsp;bark&quot;</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>&amp;</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;AND&nbsp;&nbsp;&nbsp;-&nbsp;boolean&nbsp;comparisson&nbsp;used&nbsp;to&nbsp;affirm&nbsp;&amp;&nbsp;compound&nbsp;expressions</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>!</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;NOT&nbsp;&nbsp;&nbsp;-&nbsp;boolean&nbsp;negation</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>=</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;same&nbsp;&nbsp;-&nbsp;strict&nbsp;boolean&nbsp;comparisson</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>~</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;like&nbsp;&nbsp;-&nbsp;loose&nbsp;boolean&nbsp;comparisson</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>&lt;</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;less&nbsp;&nbsp;-&nbsp;is&nbsp;true&nbsp;if&nbsp;&quot;left&nbsp;of&quot;&nbsp;is&nbsp;logically&nbsp;less&nbsp;than&nbsp;&quot;right&nbsp;of&quot;,&nbsp;else&nbsp;false</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>&gt;</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;more&nbsp;&nbsp;-&nbsp;is&nbsp;true&nbsp;if&nbsp;&quot;left&nbsp;of&quot;&nbsp;is&nbsp;logically&nbsp;more&nbsp;than&nbsp;&quot;right&nbsp;of&quot;,&nbsp;else&nbsp;false</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div></pre>
+<p>Some logical operators can be used together as compound operators.<br>
+The logical compound operators are:</p>
+<ul>
+<li><code style="font-family: Liberation Mono;">!=</code> not same</li>
+<li><code style="font-family: Liberation Mono;">!~</code> not like</li>
+<li><code style="font-family: Liberation Mono;">&gt;=</code> more same</li>
+<li><code style="font-family: Liberation Mono;">&lt;=</code> less same</li>
+</ul>
+<p><br><br></p>
+<h4 id="arithmetic-operators">Arithmetic Operators</h4>
+<p>In addition to &quot;normal&quot; arithmetic operation, VAMP also uses arithmetic to do data manipulation on various data-types.
+This saves a lot of time &amp; duplication of function names. More on this later.</p>
+<p>These are the arithmetic operators:</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>+</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;add</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>-</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;subtract</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>*</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;multiply</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>/</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;divide</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>%</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;modulus</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="keyword operator $1 js"><span>^</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;exponent</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div></pre>
+<p>VAMP is extremely versatile as a language, hence it has some rules of what belongs where.<br>
+The logical and arithmetic operators do not have any calculation value outside of &quot;expression context&quot;, so, they MUST be inside expression context in order to be &quot;calculated&quot; (evaluated) accordingly.</p>
+<p>When logcal -or arithmetic operators are used outside of expression context, then it is plain text.</p>
+<p>Take note that VAMP requires white-space between operators in &quot;expression context&quot; -with only 4 exceptions to this rule, the following can be used directly in front of anything, -except logical, reference &amp; arithmetic operators:</p>
+<ul>
+<li><code style="font-family: Liberation Mono;">!</code> boolean negative-truth test</li>
+<li><code style="font-family: Liberation Mono;">?</code> negative number</li>
+<li><code style="font-family: Liberation Mono;">-</code> negative number</li>
+<li><code style="font-family: Liberation Mono;">+</code> positive umber</li>
+</ul>
+<hr>
+<p><br></p></body>
+</html>

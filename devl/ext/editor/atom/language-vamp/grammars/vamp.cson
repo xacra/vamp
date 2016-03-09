@@ -5,6 +5,9 @@
 
 'fileTypes' : [
   'v'
+  'va'
+  'vam'
+  'vamp'
 ]
 
 
@@ -48,7 +51,7 @@
    }
 
    {
-    'match': '\\b(None|Vbit|Nume|Data|List|Node|Fail|Tick|Bios|VoidNone|TrueVbit|BareVbit|FalsVbit|BareNume|UnitNume|FracNume|RateNume|VbitData|NumeData|TextData|ListData|NodeData|HardData|BiosData|BareList|FlatList|TreeList|BareNode|FlatNode|TreeNode|FuncNode|TimeTick|BiosTick|PathBios|SockBios|UserBios|ProcBios)\\b'
+    'match': '\\b(Void|Spin|Nume|Data|List|Node|Fail|Time|Emit|Bios|NoneVoid|PosiSpin|IffySpin|NegaSpin|BareNume|IntgNume|FracNume|UnitNume|BareData|VbitData|NumeData|TextData|ListData|NodeData|HardData|BiosData|BareList|FlatList|TreeList|BareNode|FlatNode|TreeNode|FuncNode|TimeTick|BiosTick|PathBios|SockBios|UserBios|ProcBios)\\b'
     'name': 'keyword.control.js'
    }
 
@@ -60,6 +63,22 @@
    {
     'match': '(\\$)[0-9A-Za-z]+'
     'name': 'variable.language.js'
+   }
+
+   {
+     'match': '(%)[A-Za-z0-9:]+'
+     'name': 'string.regexp.js'
+   }
+
+   {
+      'match': '\\+|-|\\*|/|%|\\^|@|&|!|\\?|>|<|=|~|:'
+      'name': 'keyword.operator.$1.js'
+   }
+
+
+   {
+    'match': '\\b(True|Fals|Bare|None|Root)\\b'
+    'name': 'support.constant.js'
    }
 
 ]
@@ -213,7 +232,7 @@
     'patterns': [
       {
         'comment': '`prop` in `obj.prop`, `func().prop`'
-        'match': '(\\.)\\s*(?:(\\b\\d\\w*)|(IsType|IsKind)|([A-Z][A-Z0-9_$]*\\b\\$*)|([\\w$]*))'
+        'match': '(\\.)\\s*(?:(\\b\\d\\w*)|(IsType|IsKind|Trim)|(Name|Gist|Auth|Lock|Call|Size|Spin|Find|Kind|Type)|([A-Z][A-Z0-9_$]*\\b\\$*)|([\\w$]*))'
         'captures':
           '1':
             'name': 'meta.delimiter.property.period.js'
@@ -222,8 +241,11 @@
           '3':
             'name': 'support.function.js'
           '4':
-            'name': 'constant.other.property.js'
+            'name': 'support.constant.js'
           '5':
+            'name': 'constant.other.property.js'
+          '6':
             'name': 'variable.other.property.js'
       }
+
     ]
