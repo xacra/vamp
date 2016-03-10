@@ -391,7 +391,7 @@ pre.editor-colors .markdown .link .string.title,
    body
    {
       font-family: Arial, Helvitica, Sans;
-      font-size:12px !important;
+      font-size:13px !important;
       background: url('../../art/img/bg_texture.jpg') !important;
    }
 
@@ -430,14 +430,20 @@ pre.editor-colors .markdown .link .string.title,
       padding-left:10px;
       padding-right:10px;
    }
+
+   .pageNext
+   { margin-bottom:800px; }
+
+   .pageHead
+   { height:30px; }
+
 </style>
 
-
-<h1 id="vamp">VAMP</h1>
-<h4 id="v-e-r-s-a-t-i-l-e-nbsp-nbsp-a-p-p-l-i-c-a-t-i-o-n-nbsp-nbsp-m-e-t-a-p-r-o-g-r-a-m-m-i-n-g">V e r s a t i l e &nbsp;&nbsp; A p p l i c a t i o n &nbsp;&nbsp; M e t a - P r o g r a m m i n g</h4>
+<p><br></p>
+<h1 id="context">Context</h1>
 <hr>
 <p><br></p>
-<h2 id="context">Context</h2>
+<h2 id="about-vamp-context">About VAMP context</h2>
 <p>Everything in your entire VAMP project structure is based on: &quot;concepts&quot;, &quot;contexts&quot;, &quot;aspects&quot; and &quot;values&quot;.<br>
 At &quot;project root&quot; level, everything directly inside it are referred to as &quot;concepts&quot; - which exist in the &quot;context&quot; of your &quot;project root&quot;.</p>
 <p>The &quot;aspects&quot; of every &quot;context&quot; -or &quot;concept&quot; has &quot;values&quot; which define its attributes, relationships, methods, and contents. The collective for &quot;aspects&quot; is simply referred to as <code style="font-family: Liberation Mono;">meta</code>, represented by the <code style="font-family: Liberation Mono;">$</code> character wich means &quot;self&quot;.</p>
@@ -447,8 +453,8 @@ As you may have guessed by now that you cannot simply access any &quot;path&quot
 <p>It is important to note in these docs about references to &quot;implicit&quot; &amp; &quot;explicit&quot;. Vamp is designed to make your life easier, so if things get done &quot;implicitly&quot; it simply means: &quot;automatically done the way it it is implied&quot;; where &quot;explicitly&quot; means: &quot;do the followng exactly&quot;.</p>
 <p>The difference between &quot;implicit&quot; and &quot;explicit&quot; is:</p>
 <ul>
-<li>&quot;implicit&quot; is faster to code for a developer, but runs a bit slower during runtime</li>
-<li>&quot;explicit&quot; runs a bit faster during runtime, but sometimes require more coding
+<li>&quot;implicit&quot; is less coding, but may run a bit slower at runtime (in some cases)</li>
+<li>&quot;explicit&quot; may run a bit faster at runtime, but also may require a bit more coding
 <br><br></li>
 </ul>
 <p>With the above in mind, when using the following operators after a named (or unnamed) entity, it usually means this:</p>
@@ -459,6 +465,9 @@ As you may have guessed by now that you cannot simply access any &quot;path&quot
 <p>The rest of this doc will explain.</p>
 <hr>
 <p><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
 <h3 id="aspects">Aspects</h3>
 <p>Here is an example of how to define some &quot;thing&quot; and give it some properties:</p>
 <pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span>ride&nbsp;</span><span class="meta brace curly js"><span>{</span></span><span>color</span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>blue</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span>,&nbsp;roof</span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>none</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span>,&nbsp;status</span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>notorious</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace curly js"><span>}</span></span></span></div></pre>
@@ -478,6 +487,9 @@ You can also define an entity with aspects and contents with the <code style="fo
 <p>In the example above, the <code style="font-family: Liberation Mono;">{}</code> denotes the aspects of &quot;ride&quot; and the <code style="font-family: Liberation Mono;">[]</code> denotes the &quot;contents&quot; of &quot;ride&quot;.</p>
 <hr>
 <p><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
 <h3 id="functions-methods">Functions &amp; Methods</h3>
 <p>A function (or &quot;called on method&quot;) is defined with the <code style="font-family: Liberation Mono;">()[]</code> operator sequence like this:</p>
 <pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span>ride&nbsp;</span><span class="meta brace round js"><span>(</span><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>vrooom!</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>]</span></span></span></div></pre>
@@ -496,11 +508,12 @@ The following example will explain:</p>
 <hr>
 <p><br></p>
 <h3 id="definition">Definition</h3>
-<p>VAMP offers different ways of defining, modifying &amp; extending things. This is by design as some things are better to define one way and modify in another way, depending on the dynamics of your logic.
-<br><br></p>
-<h4 id="define-modify">define &amp; modify</h4>
+<p>VAMP offers different ways of defining, modifying &amp; extending things. This is by design as some things are better to define one way and modify in another way, depending on the dynamics of your logic.</p>
 <p>The following example shows how to create an entity and modify it after:</p>
 <pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span>ride</span><span class="keyword operator $1 js"><span>:</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span><span>}</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>ride</span><span class="meta delimiter property period js"><span>.</span></span><span class="variable other property js"><span>roof</span></span><span class="keyword operator $1 js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>no</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span>ride</span><span class="meta delimiter property period js"><span>.</span></span><span class="support constant js"><span>Gist</span></span><span class="keyword operator $1 js"><span>:</span></span><span>&nbsp;</span><span class="meta brace round js"><span>(</span></span><span>ride</span><span class="meta delimiter property period js"><span>.</span></span><span class="variable other property js"><span>roof</span></span><span>&nbsp;</span><span class="keyword operator $1 js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>&nbsp;seats</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span>ride</span><span class="meta delimiter property period js"><span>.</span></span><span class="support constant js"><span>Call</span></span><span class="keyword operator $1 js"><span>:</span></span><span>&nbsp;</span><span class="meta brace round js"><span>(</span><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>vrooom!</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>]</span></span></span></div></pre>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
 <p>The example above shows a rather &quot;long winded&quot; way of creating &amp; modifying an entity, but it shows how things are usually done in other languages; however, it works in VAMP also.</p>
 <p>In VAMP, the above can be done explicitly without repeating yourself, like this:</p>
 <pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span>ride</span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;roof</span><span class="keyword operator $1 js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>no</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;Gist</span><span class="keyword operator $1 js"><span>:</span></span><span>&nbsp;</span><span class="meta brace round js"><span>(</span></span><span>$</span><span class="meta delimiter property period js"><span>.</span></span><span class="variable other property js"><span>roof</span></span><span>&nbsp;</span><span class="keyword operator $1 js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>&nbsp;seats</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;Call</span><span class="keyword operator $1 js"><span>:</span></span><span>&nbsp;</span><span class="meta brace round js"><span>(</span><span>)</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>vrooom!</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>}</span></span></span></div></pre>
@@ -532,6 +545,9 @@ In VAMP, anything can be &quot;called&quot; &quot;implicitly&quot; or &quot;expl
 <li>lookups always yield a list, even if nothing is found -an empty list is returned</li>
 <li>the lookup result list contain pointers to the &quot;real entities&quot;, so modifications can be made implicitly or explicitly</li>
 </ul>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
 <p>Here are some examples of how to &quot;call&quot; things &quot;implicitly&quot;; the comment on the right shows what is returned:</p>
 <pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span>ride</span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>{</span></span><span>color</span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>blue</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span>,&nbsp;roof</span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>none</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span>,&nbsp;status</span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>notorious</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source vamp"><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>---</span></span><span>--------------------------------------------------------------------</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>ride</span><span class="meta brace round js"><span>(</span><span>)</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;[color:&#39;blue&#39;,&nbsp;roof:&#39;none&#39;,&nbsp;status:&#39;notorious&#39;]</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>ride</span><span class="meta brace round js"><span>(</span></span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>moo</span><span class="punctuation definition string end js"><span>`</span></span></span><span class="meta brace round js"><span>)</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;[]</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>ride</span><span class="meta brace round js"><span>(</span></span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>color</span><span class="punctuation definition string end js"><span>`</span></span></span><span class="meta brace round js"><span>)</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;[color:blue]</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>ride</span><span class="meta brace round js"><span>(</span></span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>moo</span><span class="punctuation definition string end js"><span>`</span></span></span><span>&nbsp;|&nbsp;</span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>color</span><span class="punctuation definition string end js"><span>`</span></span></span><span class="meta brace round js"><span>)</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;[color:blue]</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div><div class="line"><span class="source vamp"><span>ride</span><span class="meta brace round js"><span>(</span></span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>roof</span><span class="punctuation definition string end js"><span>`</span></span></span><span>,&nbsp;</span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>status</span><span class="punctuation definition string end js"><span>`</span></span></span><span class="meta brace round js"><span>)</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment line double-slash js"><span class="punctuation definition comment js"><span>::</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;[&#39;roof:none&#39;,&nbsp;&#39;status:notorious&#39;]</span><span class="punctuation definition comment js"><span>&nbsp;</span></span></span></span></div></pre>
 <p>Let&#39;s go through the example above line by line:</p>
@@ -551,5 +567,8 @@ In VAMP, anything can be &quot;called&quot; &quot;implicitly&quot; or &quot;expl
 <li>the &quot;content&quot; (or &quot;Gist aspect&quot;) of &quot;ride&quot; is selected, so the call is done on the contents explicitly -which in this case is &quot;nothing&quot; because our &quot;ride&quot; has no contents.</li>
 </ol>
 <hr>
-<p><br></p></body>
+<p><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p></body>
 </html>
