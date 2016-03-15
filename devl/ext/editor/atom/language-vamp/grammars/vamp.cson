@@ -51,7 +51,7 @@
    }
 
    {
-    'match': '\\b(Void|Spin|Nume|Data|List|Node|Fail|Time|Emit|Bios|NoneVoid|PosiSpin|IffySpin|NegaSpin|BareNume|IntgNume|FracNume|UnitNume|BareData|VbitData|NumeData|TextData|ListData|NodeData|HardData|BiosData|BareList|FlatList|TreeList|BareNode|FlatNode|TreeNode|FuncNode|TimeTick|BiosTick|PathBios|SockBios|UserBios|ProcBios)\\b'
+    'match': '\\b(Void|Spin|Nume|Data|List|Node|Fail|Time|Emit|Bios|NoneVoid|TrueSpin|BareSpin|FalsSpin|BareNume|IntgNume|FracNume|UnitNume|BareData|SpinData|NumeData|TextData|ListData|NodeData|HardData|BiosData|BareList|FlatList|TreeList|BareNode|FlatNode|TreeNode|FuncNode|BiosNode|NumeTime|DateTime|EmitTime)\\b'
     'name': 'keyword.control.js'
    }
 
@@ -66,8 +66,8 @@
    }
 
    {
-     'match': '(%)[A-Za-z0-9:]+'
-     'name': 'string.regexp.js'
+     'match': '(#)[A-Za-z0-9\\\\_\\.:]+'
+     'name': 'keyword.control.js'
    }
 
    {
@@ -75,10 +75,14 @@
       'name': 'keyword.operator.$1.js'
    }
 
-
    {
     'match': '\\b(True|Fals|Bare|None|Root)\\b'
     'name': 'support.constant.js'
+   }
+
+   {
+    'match': '([A-Z])[a-zA-Z]+'
+    'name': 'support.class.js'
    }
 
 ]
@@ -121,11 +125,6 @@
       {
         'match': '\\b(?<!\\$|_)([0-9]+(\\.[0-9]+)?)\\b'
         'name': 'constant.numeric.js'
-      }
-
-      {
-        'match': '(#[0-9A-Z]+(\\.[0-9A-Z]+)?)'
-        'name': 'string.regexp.js'
       }
 
     ]
@@ -232,7 +231,7 @@
     'patterns': [
       {
         'comment': '`prop` in `obj.prop`, `func().prop`'
-        'match': '(\\.)\\s*(?:(\\b\\d\\w*)|(IsType|IsKind|Trim)|(Name|Gist|Auth|Lock|Call|Size|Spin|Find|Kind|Type)|([A-Z][A-Z0-9_$]*\\b\\$*)|([\\w$]*))'
+        'match': '(\\.)\\s*(?:(\\b\\d\\w*)|(IsType|IsKind|Trim)|(Name|Gist|Auth|Lock|Call|Size|Spin|Find|Kind|Type|Tick)|([A-Z][A-Z0-9_$]*\\b\\$*)|([\\w$]*))'
         'captures':
           '1':
             'name': 'meta.delimiter.property.period.js'

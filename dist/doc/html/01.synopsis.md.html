@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>01.synopsis</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); overflow: auto; background-color: rgb(29, 31, 33); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); background-color: rgb(48, 51, 55); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-preview code { text-shadow: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+pre.editor-colors,
+.host {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
+}
+pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #292c2f;
+}
+pre.editor-colors .gutter .cursor-line,
+.host .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .line-number.cursor-line-no-selection,
+.host .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #fba0e3;
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-color: #ffffff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #444444;
+}
+pre.editor-colors .source.gfm,
+.host .source.gfm {
+  color: #999;
+}
+pre.editor-colors .gfm .markup.heading,
+.host .gfm .markup.heading {
+  color: #eee;
+}
+pre.editor-colors .gfm .link,
+.host .gfm .link {
+  color: #555;
+}
+pre.editor-colors .gfm .variable.list,
+.host .gfm .variable.list,
+pre.editor-colors .gfm .support.quote,
+.host .gfm .support.quote {
+  color: #555;
+}
+pre.editor-colors .gfm .link .entity,
+.host .gfm .link .entity {
+  color: #ddd;
+}
+pre.editor-colors .gfm .raw,
+.host .gfm .raw {
+  color: #aaa;
+}
+pre.editor-colors .markdown .paragraph,
+.host .markdown .paragraph {
+  color: #999;
+}
+pre.editor-colors .markdown .heading,
+.host .markdown .heading {
+  color: #eee;
+}
+pre.editor-colors .markdown .raw,
+.host .markdown .raw {
+  color: #aaa;
+}
+pre.editor-colors .markdown .link,
+.host .markdown .link {
+  color: #555;
+}
+pre.editor-colors .markdown .link .string,
+.host .markdown .link .string {
+  color: #555;
+}
+pre.editor-colors .markdown .link .string.title,
+.host .markdown .link .string.title {
+  color: #ddd;
+}
+.bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}
+.comment {
+  color: #7C7C7C;
+}
+.entity {
+  color: #FFD2A7;
+}
+.entity.name.type {
+  text-decoration: underline;
+  color: #FFFFB6;
+}
+.entity.other.inherited-class {
+  color: #9B5C2E;
+}
+.keyword {
+  color: #96CBFE;
+}
+.keyword.control {
+  color: #96CBFE;
+}
+.keyword.operator {
+  color: #EDEDED;
+}
+.storage {
+  color: #CFCB90;
+}
+.storage.modifier {
+  color: #96CBFE;
+}
+.constant {
+  color: #99CC99;
+}
+.constant.numeric {
+  color: #FF73FD;
+}
+.variable {
+  color: #C6C5FE;
+}
+.invalid.deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.invalid.illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.string .source,
+.string .meta.embedded.line {
+  color: #EDEDED;
+}
+.string .punctuation.section.embedded {
+  color: #00A0A0;
+}
+.string .punctuation.section.embedded .source {
+  color: #00A0A0;
+}
+.string {
+  color: #A8FF60;
+}
+.string .constant {
+  color: #00A0A0;
+}
+.string.regexp {
+  color: #E9C062;
+}
+.string.regexp .constant.character.escape,
+.string.regexp .source.ruby.embedded,
+.string.regexp .string.regexp.arbitrary-repetition {
+  color: #FF8000;
+}
+.string.regexp.group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.string.regexp.character-class {
+  color: #B18A3D;
+}
+.string .variable {
+  color: #8A9A95;
+}
+.support {
+  color: #FFFFB6;
+}
+.support.function {
+  color: #DAD085;
+}
+.support.constant {
+  color: #FFD2A7;
+}
+.support.type.property-name.css {
+  color: #EDEDED;
+}
+.source .entity.name.tag,
+.source .punctuation.tag {
+  color: #96CBFE;
+}
+.source .entity.other.attribute-name {
+  color: #C6C5FE;
+}
+.entity.other.attribute-name {
+  color: #C6C5FE;
+}
+.entity.name.tag.namespace,
+.entity.other.attribute-name.namespace {
+  color: #E18964;
+}
+.meta.preprocessor.c {
+  color: #8996A8;
+}
+.meta.preprocessor.c .keyword {
+  color: #AFC4DB;
+}
+.meta.cast {
+  color: #676767;
+}
+.meta.sgml.html .meta.doctype,
+.meta.sgml.html .meta.doctype .entity,
+.meta.sgml.html .meta.doctype .string,
+.meta.xml-processing,
+.meta.xml-processing .entity,
+.meta.xml-processing .string {
+  color: #494949;
+}
+.meta.tag .entity,
+.meta.tag > .punctuation,
+.meta.tag.inline .entity {
+  color: #C6C5FE;
+}
+.meta.tag .name,
+.meta.tag.inline .name,
+.meta.tag > .punctuation {
+  color: #96CBFE;
+}
+.meta.selector.css .entity.name.tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.meta.selector.css .entity.other.attribute-name.tag.pseudo-class {
+  color: #8F9D6A;
+}
+.meta.selector.css .entity.other.attribute-name.id {
+  color: #8B98AB;
+}
+.meta.selector.css .entity.other.attribute-name.class {
+  color: #62B1FE;
+}
+.meta.property-group .support.constant.property-value.css,
+.meta.property-value .support.constant.property-value.css {
+  color: #F9EE98;
+}
+.meta.preprocessor.at-rule .keyword.control.at-rule {
+  color: #8693A5;
+}
+.meta.property-value .support.constant.named-color.css,
+.meta.property-value .constant {
+  color: #87C38A;
+}
+.meta.constructor.argument.css {
+  color: #8F9D6A;
+}
+.meta.diff,
+.meta.diff.header {
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.meta.separator {
+  color: #60A633;
+  background-color: #242424;
+}
+.meta.line.entry.logfile,
+.meta.line.exit.logfile {
+  background-color: rgba(238, 238, 238, 0.16);
+}
+.meta.line.error.logfile {
+  background-color: #751012;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><style>
+   body
+   {
+      font-family: Arial, Helvitica, Sans;
+      font-size:13px !important;
+      background: url('../../art/img/bg_texture.jpg') !important;
+   }
+
+   hr
+   { border: none; }
+
+   .frame
+   {
+      display: inline-block;
+      background: rgba(100,100,100,0.15);
+      padding:12px;
+      text-align:center;
+      vertical-align:top;
+      border: 1px solid rgba(128,128,128,0.3);
+      border-radius: 5px;
+      margin: 15px;
+   }
+
+   .span
+   { display:block; }
+
+   .info
+   {
+      display:block;
+      font-style:italic;
+      font-size:12px;
+      padding-left:15px;
+   }
+
+   .bigTxt
+   {
+      display:inline-block;
+      vertical-align:top;
+      font-size:40px;
+      line-height:60px;
+      padding-left:10px;
+      padding-right:10px;
+   }
+
+   .pageNext
+   { margin-bottom:800px; }
+
+   .pageHead
+   { height:30px; }
+
+</style>
+
+<p><br></p>
+<h1 id="vamp">VAMP</h1>
+<h4 id="v-e-r-s-a-t-i-l-e-nbsp-nbsp-a-p-p-l-i-c-a-t-i-o-n-nbsp-nbsp-m-e-t-a-p-r-o-g-r-a-m-m-i-n-g">V e r s a t i l e &nbsp;&nbsp; A p p l i c a t i o n &nbsp;&nbsp; M e t a - P r o g r a m m i n g</h4>
+<hr>
+<p><br></p>
+<h2 id="synopsis">Synopsis</h2>
+<p><br></p>
+<h3 id="introduction">Introduction</h3>
+<p>Vamp runs as a daemon (background service API) on the host it is installed -which by deafault is configured to stay up and running even if the host is rebooted. This daemon manages &amp; monitors other Vamp instances. These instances are managed (configured, started &amp; stopped) either via the command-line or the Vamp daemon API. Vamp instances depend on the Vamp daemon, so if the daemon dies, the instances will (gracefully) commit suicide.</p>
+<p>A &quot;Vamp Project&quot; is simply a folder with some Vamp file(s) inside it. Vamp file-extensions can be any of these: <code style="font-family: Liberation Mono;">.v</code> <code style="font-family: Liberation Mono;">.va</code> <code style="font-family: Liberation Mono;">.vam</code> <code style="font-family: Liberation Mono;">.vamp</code>.</p>
+<p>When you create a new Vamp project, or simply want to test some Vamp code, make sure you do this in a new (empty) folder, or a folder that contains items related to your project, because Vamp expects these as part of your project&#39;s live runtime structure; however, only the items referred to in your Vamp code will be loaded accordingly.</p>
+<p>Any &quot;item&quot; -like a file or folder (simply: &quot;node&quot;) in your project structure have &quot;aspects&quot; (attributes), some of which are automatic -which (also) deals with relationships between items in your project. These &quot;automatic-attributes&quot; (meta-aspects) also deal with how an item reacts when &quot;called&quot; -as anything in Vamp can be called (like a function). &quot;Calling&quot; operates in different ways, depending on how you define and call an item.</p>
+<p>Any &quot;node&quot; can have &quot;contents&quot; (even functions have contents -which is a list of instructions).<br>
+The contents (and aspects) of any &quot;node&quot; is directly related to that &quot;node&quot;, and its context remains within this &quot;node&quot;. This means that your &quot;runtime scope&quot; is well preserved everywhere, which is also your runtime structure. Remember this, it is very important.</p>
+<p>Vamp code closely correlates to &quot;folders &amp; files&quot; as a structure; meaning that any (live) Vamp code can be &quot;saved to disk&quot; as a &quot;tree structure&quot; -consisting of folders &amp; files that represent the functional structure and data of your live project. This makes any live Vamp project dynamically portable, -or can be used for recovery purposes.</p>
+<p>Vamp has an intrinsic (built in) transmission control system, called &quot;bios&quot; (basic input output system) -which is extensible. It&#39;s IO functions have short-cut names like: <code style="font-family: Liberation Mono;">Sock</code> (socket), <code style="font-family: Liberation Mono;">Proc</code> (process), etc, -each of which have protocols -according to which default &quot;flow&quot; mechanisms control its input and output accordingly. The Vamp &quot;bios&quot; and all its control systems and their protocols are by default configured and oprimized for rapid development; however, they can be configured and overridden per instance during runtime.</p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<p>Some of these &quot;bios&quot; controls automatically &quot;transpile&quot; Vamp code into the appropriate language(s) (code) for each &quot;tick&quot; (request/event) respectively; however, this automation can be configured, and, any structure (like a document) can be &quot;baked&quot; (transpiled) to be &quot;served&quot; directly; which is resource conservative. It is important to structure your Vamp projects and name your Vamp files appropriately -with compound file expensions, like: <code style="font-family: Liberation Mono;">home.html.v</code> -which makes it easy to find and identify -for yourself and Vamp.<br></p>
+<p>For security reasons, Vamp files cannot be &quot;served&quot; directly via any Vamp &quot;bios&quot;. If you want to do so, it has to be explicitly transpiled to &quot;plain text&quot; first.<br>
+A &quot;bios&quot; can also be used to just transpile Vamp code into other server-side (-or client side) languages, like: Python, Ruby, PHP, JavaScript, etc.</p>
+<p>Your Vamp project operates as a &quot;programmable live database&quot; -which follows your project structure, making it simple to write versatile applications that are well structured, dynamic, stable and portable. It is up to the developer to structure and scale large projects appropriately; either on the same host, or accross several servers and networks with the proper security measures in place, which Vamp also supports.</p>
+<p>All of the above (and more) is done in a simple &amp; elegant syntax (grammar) that looks like a combination of: JavaScript, C, CSS, PHP, &amp; Lisp.
+<br><br><br><br></p>
+<h3 id="examples">Examples</h3>
+<p>Many people don&#39;t like &quot;reading&quot; too much; however, if you skipped the &quot;Introduction&quot; above, read that first, else none of the following will make any sense.</p>
+<p>These examples below are not &quot;tutorials&quot;, but, fear not, a detailed guide for installation and a &quot;Hello World!&quot; tutorial is in the &quot;orientation&quot;; these are just so you can get a feel of what to expect and a firm grasp of what Vamp is about.
+<br><br></p>
+<h4 id="web-server">Web Server</h4>
+<p>Remember: in Vamp you can override &amp; configure anything; either during runtime, or in your installed Vamp setup, so from here on just accept the fact that a lot of hard work has been done for you so you can just &quot;tune&quot; &amp; control things as you wish.</p>
+<p>With the above in mind: Vamp&#39;s &quot;http sock bios&quot; by default produces appropriate &quot;HTTP message codes&quot; and some required headers, like &quot;Content-Type&quot; (mime-type) and &quot;Content-Length&quot; (byte-size).<br></p>
+<p>The context (or folder path) where any BIOS is instantiated becomes the &quot;root path&quot; of any &quot;path request&quot; on that BIOS instance.<br>
+This is for logicical structure and security reasons. Everything in Vamp works this way.<br>
+If you don&#39;t like this, then just put it somewhere else -lower down the &quot;tree&quot;, like in your &quot;project root&quot;, this way it will have &quot;read&quot; access to everything in that context by relation to the other items in there &quot;akin&quot; to itself. &quot;Write access&quot; to the items &quot;akin&quot; to itself can be achieved by defining it as such in the meta-aspects of the other items.<br>
+See this security measure as &quot;parents&quot; who can &quot;teach&quot; their own children, but others need permission for this priviledge.</p>
+<p>By now you can see how Vamp is geared towards structure, simplicity and security.</p>
+<p>In the examples that follow, for clarity and brevity, I&#39;ll assume you created a file inside your &quot;project root&quot; named: <code style="font-family: Liberation Mono;">$.v</code>, and this is the file in which we will place the code in the examples below.
+An explanation of &quot;$&quot; files is in the &quot;orientation&quot;, but for now: &quot;$&quot; simply means: &quot;self&quot;, and when a file-name starts with &quot;$&quot; -it is loaded first, and any text inbetween the &quot;$&quot; and the &quot;.v&quot; will be an aspect-name of the context in which it resides.</p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h6 id="automatic-web-server">Automatic Web Server</h6>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#HTTP:127.0.0.1:9000</span></span><span class="meta brace round js"><span>)</span></span></span></div></pre>
+<p>I can only imagine the expression on your face... read on, you&#39;ll see :)</p>
+<p>In the example above, we created an &quot;event listener&quot; that handles &quot;http&quot; requests made to the IP addess: &quot;127.0.0.1&quot; on port: &quot;80&quot;. It will perform &quot;expressions&quot; on any path requested, based on the &quot;method&quot; of the request and the &quot;arguments&quot; (http request variables) passed along with the request.</p>
+<p>If there is a problem with the request, like if the path does not exist, or this bios instance does not have permission to read (or write, based on the request path &amp; method) it will produce an appropriate http response code (like 404, 403, etc) along with a good-looking error message.</p>
+<p>This explanation may get a little long and technical, but for now, just know that: by default it handles requests &amp; responses automatically and appropriately as it is geared towards simplicity and resource conservation. More on this is available in the &quot;bios&quot; section of this documentation.
+<br><br></p>
+<h6 id="picture-web-server">Picture Web Server</h6>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#HTTP:127.0.0.1:9000</span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Mime</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace square js"><span>[</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>jpg</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span>,</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>png</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>}</span></span></span></div></pre>
+<p>The example above will only handle requests made to files with &quot;jpg&quot; &amp; &quot;png&quot; extensions.<br>
+Note that if you used both the &quot;Automatoc Web Server&quot; example together with this one, then this one will override these 2 mime-types and this example will handle it, instead of the other.
+<br><br></p>
+<h6 id="path-web-server">Path Web Server</h6>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#HTTP:127.0.0.1:9000</span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Path</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace square js"><span>[</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>/docs/</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Bias</span></span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Deny</span></span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Addr</span></span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>192.*</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>47.*</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Path</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>/docs/gossip/</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Mime</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace square js"><span>[</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>pdf</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Path</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace square js"><span>[</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>/docs/staff/</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>}</span></span></span></div></pre>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<p>The example above will only handle requests made to the folder &quot;docs&quot; inside the context where this bios instance resides. This will override any other &quot;general&quot; http handlers related to &quot;Path&quot; on the same socket.<br></p>
+<p>This example (above) also implements specific security overrides on the &quot;127.0.0.1:9000&quot; socket over &quot;http&quot; protocol:<br>
+It denies all access from any ip address starting with &#39;192.&#39;<br>
+It denies everything in the &quot;/docs/gossip/&quot; folder -and &quot;PDF&quot; files from any ip address starting with &quot;47.&quot;<br>
+It denies any access to &quot;/docs/staff/&quot; for everyone.</p>
+<p>Of coarse you can make a separate file, like: <code style="font-family: Liberation Mono;">rules.cfg.v</code> and just assign: <code style="font-family: Liberation Mono;">Bias: rules.cfg.v</code>, or however you want; it would be preferable, especially with a long list of such rules that may be needed for other BIOS instances as well.
+<br><br></p>
+<h6 id="automatic-web-socket-server">Automatic Web-socket Server</h6>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#WS:127.0.0.1:9100</span></span><span class="meta brace round js"><span>)</span></span></span></div></pre>
+<p>In the example above, the same rules apply, with similar configuration.
+<br><br><br></p>
+<h4 id="raw-socket-handler">Raw socket handler</h4>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#TCP:127.0.0.1:9200</span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="variable language js"><span>$Push</span></span><span class="meta brace round js"><span>(</span></span><span class="variable language js"><span>$Pull</span></span><span>&nbsp;</span><span class="keyword operator $1 js"><span>+</span></span><span>&nbsp;</span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>&nbsp;-back&nbsp;to&nbsp;you!</span><span class="punctuation definition string end js"><span>`</span></span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>]</span></span></span></div></pre>
+<p>The example above shows how to override the &quot;event&quot; (Tick) handler on any socket. Note that it does not specify a sub-protocol, so this means you will have to handle the raw input and output data yourself.
+<br><br><br></p>
+<h4 id="child-process-mule">Child process :: Mule</h4>
+<p>Child processes in VAMP are called &quot;mules&quot; (workers); however, they are NOT &quot;forks&quot; of the parent process and each mule occupies 1 processing thread. As their title imply, they are not &quot;fertile&quot; -so they can&#39;t (-or rather shouldn&#39;t) have &quot;children&quot;.<br></p>
+<p>Mules are typically used to either share work-load, or to do specific tasks (once-off -or persistant), -away from the main process. The main (project root) process cannot execute system commands; however, mules can, because their priviledges can be limited to only certain resources, or certain commands.</p>
+<p>Mules can only be &quot;spawned&quot; locally; they can only be commanded by the parent; they only report to their parent, and their parent manages communication between them in order to minimize any confusion -or disputes (-race conditions). Mules also report progress of tasks managed by them.</p>
+<p>Mules can be used to setup servers -remotely via SSH -or which ever command interface you prefer --from operating system installation &amp; configuration -to Vamp setup. The resources of these remote servers can become part of your main project root structure -as most of Vamp&#39;s processes are asynchronous anyway. Remote resources are managed via ecrypted communication channels.</p>
+<p>When a mule is done with its work -or if it fails, it dies. When a mule dies, its parent is notified via its messaging channel, which will either be a detailed &quot;Done&quot; -or &quot;Fail&quot; message.</p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<p>Mules can &quot;fail&quot; under various conditions: if it&#39;s commands encounter a fatal error, or when its &quot;time-limit&quot; is exceeded, or if it &quot;fatigues&quot; the host system by occupying too much CPU for too long, or too much RAM (for too long), or too much disk space, too much band-width, etc. Each of these limits are already set in the main Vamp installation setup config, which can be overridden upon initialization of any mule -or can be set in the project root config of each project; however, the maximum limits set in the Vamp installation setup config cannot be overridden at all, they will just default to the limits if exceeded.</p>
+<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Mule</span></span><span class="meta brace round js"><span>(</span></span><span>exec</span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>echo&nbsp;&quot;blah&quot;</span><span class="punctuation definition string end js"><span>`</span></span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="variable language js"><span>$Done</span></span><span class="meta brace round js"><span>(</span></span><span class="constant numeric js"><span>0</span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>]</span></span></span></div></pre>
+<hr>
+<p><br></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This &quot;synopsis&quot; was both too long and way too short. There is so much more to Vamp, but this you will have to discover in the rest of this documentation; however, I hope it helped with understanding more about Vamp, even though it was a lot of text to read; thanks for not giving up.</p>
+<p>There is no doubt that Vamp is versatile and powerful. A little code goes a long way. Your structure is your empire that could span securely across multiple networks accross different continents. Whith this kind of flexibility, scalability, stability, speed of development and mass deployment; the things you can do with Vamp is nothing short of astounding.</p>
+<p>Next up is the &quot;orientation&quot;, so grab a drink &amp; some crisps; you&#39;re about to unveil a geek-adventure filled with might &amp; magic!</p>
+<hr>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p></body>
+</html>
