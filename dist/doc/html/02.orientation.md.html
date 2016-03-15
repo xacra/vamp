@@ -637,7 +637,7 @@ Note that you do not need to do the &quot;mounting&quot; thing, and you also do 
 <li>Any VAMP project needs its own folder (which defines the runtime scope)</li>
 <li>VAMP files can have any of the following file extensions: <code style="font-family: Liberation Mono;">.v</code> <code style="font-family: Liberation Mono;">.va</code> <code style="font-family: Liberation Mono;">.vam</code> <code style="font-family: Liberation Mono;">.vamp</code></li>
 <li><code style="font-family: Liberation Mono;">$</code> (meta) files are optional, but mandatory in <code style="font-family: Liberation Mono;">project root</code> and refer to the folder they are in</li>
-<li>items in folders are loaded sequentially in ascending order by name, so <code style="font-family: Liberation Mono;">$</code> files are loaded first</li>
+<li><code style="font-family: Liberation Mono;">$</code> files are the only files that get loaded automatically, and this happens in alphabetical order</li>
 <li>the contents of VAMP files are statements in the context of the file-name and folder hierarchy</li>
 <li>statements are evaluated by context, parsed from left-to-right and top-to-bottom</li>
 <li>the return value of any context is determined implicitly or explicitly
@@ -672,10 +672,9 @@ Note that you do not need to do the &quot;mounting&quot; thing, and you also do 
 </div>
 <span class="info">above :: project root of &quot;example.com&quot;</span>
 <br><br></p>
-<p>Using your editor, open the <code style="font-family: Liberation Mono;">$.v</code> file and type <code style="font-family: Liberation Mono;">Hello World!</code> inside it, and <strong>save</strong>.<br>
-Your project should look something like this:</p>
+<p>Using your editor, open the <code style="font-family: Liberation Mono;">$.v</code> file and inside it, type the code you see in the image below, and <strong>save</strong>.<br></p>
 <p><div class="frame span">
-   <img src="/home/charl/Projects/vamp/dist/art/img/01.demo_edit.png">
+   <img src="/home/charl/Projects/vamp/dist/art/img/hello_world.png">
 </div>
 <span class="info">above :: project: &quot;example.com&quot;</span>
 <br><br></p>
