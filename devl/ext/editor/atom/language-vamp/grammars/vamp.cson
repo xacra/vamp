@@ -51,17 +51,17 @@
    }
 
    {
-    'match': '\\b(Void|Spin|Nume|Data|List|Node|Fail|Time|Emit|Bios|NoneVoid|TrueSpin|BareSpin|FalsSpin|BareNume|IntgNume|FracNume|UnitNume|BareData|SpinData|NumeData|TextData|ListData|NodeData|HardData|BiosData|BareList|FlatList|TreeList|BareNode|FlatNode|TreeNode|FuncNode|BiosNode|NumeTime|DateTime|EmitTime)\\b'
+    'match': '\\b(Void|Spin|Nume|Data|List|Node|Fail|Time|Emit|Bios|NoneVoid|PosiSpin|IffySpin|NegaSpin|BareNume|IntgNume|FracNume|UnitNume|BareData|SpinData|NumeData|TextData|ListData|NodeData|HardData|BiosData|BareList|FlatList|TreeList|BareNode|FlatNode|TreeNode|FuncNode|BiosNode|NumeTime|DateTime|EmitTime)\\b'
     'name': 'keyword.control.js'
    }
 
    {
-    'match': '(@)[0-9A-Za-z]+'
-    'name': 'support.class.js'
+    'match': '(\\$)([A-Z])[a-z]+'
+    'name': 'support.constant.js'
    }
 
    {
-    'match': '(\\$)[0-9A-Za-z]+'
+    'match': '(\\$)([a-z])[0-9A-Za-z]+'
     'name': 'variable.language.js'
    }
 
