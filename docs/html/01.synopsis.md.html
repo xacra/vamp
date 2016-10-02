@@ -101,9 +101,17 @@
 .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
 .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
 .markdown-preview code { text-shadow: none; }
+.markdown-preview { font-size: 13px; color: rgb(187, 187, 187) !important; background: url("../_/img/bg_texture.jpg"); }
+.markdown-preview h1, .markdown-preview h2, .markdown-preview h3 { border: none !important; }
+.markdown-preview hr { border-style: dashed none none !important; border-top-width: 2px !important; border-top-color: rgb(85, 85, 85) !important; background: none !important; }
+.markdown-preview pane { display: inline-block; padding: 12px; text-align: center; vertical-align: top; border: 1px solid rgba(128, 128, 128, 0.298039); border-radius: 5px; margin: 15px; background: rgba(100, 100, 100, 0.14902); }
 .bracket-matcher .region {
   border-bottom: 1px dotted lime;
   position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
 }
 
 pre.editor-colors,
@@ -387,254 +395,10 @@ pre.editor-colors .markdown .link .string.title,
 }
 </style>
   </head>
-  <body class='markdown-preview'><style>
-   body
-   {
-      font-family: Arial, Helvitica, Sans;
-      font-size:13px !important;
-      background: url('../../art/img/bg_texture.jpg') !important;
-   }
-
-   hr
-   { border: none; }
-
-   .frame
-   {
-      display: inline-block;
-      background: rgba(100,100,100,0.15);
-      padding:12px;
-      text-align:center;
-      vertical-align:top;
-      border: 1px solid rgba(128,128,128,0.3);
-      border-radius: 5px;
-      margin: 15px;
-   }
-
-   .span
-   { display:block; }
-
-   .info
-   {
-      display:block;
-      font-style:italic;
-      font-size:12px;
-      padding-left:15px;
-   }
-
-   .bigTxt
-   {
-      display:inline-block;
-      vertical-align:top;
-      font-size:40px;
-      line-height:60px;
-      padding-left:10px;
-      padding-right:10px;
-   }
-
-   .pageNext
-   { margin-bottom:800px; }
-
-   .pageHead
-   { height:30px; }
-
-</style>
-
-<p><br></p>
-<h1 id="vamp">VAMP</h1>
-<h4 id="v-e-r-s-a-t-i-l-e-nbsp-nbsp-a-p-p-l-i-c-a-t-i-o-n-nbsp-nbsp-m-e-t-a-p-r-o-g-r-a-m-m-i-n-g">V e r s a t i l e &nbsp;&nbsp; A p p l i c a t i o n &nbsp;&nbsp; M e t a - P r o g r a m m i n g</h4>
+  <body class='markdown-preview' data-use-github-style><h1 id="vamp">VAMP</h1>
+<p>V e r s a t i l e &nbsp;&nbsp; A p p l i c a t i o n &nbsp;&nbsp; M e t a - P r o g r a m m i n g</p>
 <hr>
-<p><br></p>
-<h2 id="synopsis">Synopsis</h2>
-<p>In order to really &quot;get&quot; what Vamp is, you need to read the text below. I mean, really, read it.<br>
-A nice &quot;movie&quot; or &quot;slide presentation&quot; would be great, but this where it starts.</p>
-<h3 id="vamp-is-">Vamp is...</h3>
-<p><em>&quot;a powerful software platform&quot;.</em></p>
-<p>Well that doesn&#39;t say much; people generally have their own ideas of what a &quot;platform&quot; is.. like.. &quot;it&#39;s huge -like an OS&quot; .. or &quot;it&#39;s complicated&quot;, or &quot;it is some desktop app with lots of complicated stuff&quot;... ?<br></p>
-<p><div class="frame">
-   <img src="/home/charl/Projects/vamp/dist/art/img/crazy_01.jpg">
-</div>
-<br></p>
-<p>Well... No, Vamp is NOT that at all.. let&#39;s try again:<br>
-<em>&quot;Vamp is a structured programming language.&quot;</em></p>
-<p>True, but again, what does that mean?<br>
-There are so many ways of describing &quot;programming languages&quot; and I&#39;m sure Vamp can in some ways fit into some of those comma-separated lists of descriptions; however, Vamp is not only a programming language.</p>
-<p><em>(KEEP READING)</em></p>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p>
-<p>Then.. -what the hell is it?<br>
-As its acronym suggests, it is what it is, here&#39;s why:</p>
-<h4 id="vamp-is-an-extensible-">Vamp is an extensible...</h4>
-<ul>
-<li>programming language (interpreted or compiled)</li>
-<li>MIME-type authoring syntax -and transpiler</li>
-<li>BIOS for information transmission</li>
-<li>active database</li>
-</ul>
-<p><strong>Sure but... these software concepts are separate for a reason yes?</strong><br>
-True, however, in order to use all of those in a complete software solution, you often need to learn at least 5 completely different languages, not even mentioning compatibilities, deprecations, strandards compliance, etc.
-<br><br></p>
-<p><strong>So okay, what if I already have all of the above, and it&#39;s working, why choose Vamp?</strong><br>
-Well...</p>
-<ul>
-<li>Vamp can interface with almost anything software (or hardware) related, like other data-bases.</li>
-<li>It can be used to produce other existing languages, like: C, Python, JavaScript, PHP, HTML, CSS, etc.</li>
-<li>It utilizes the concepts of the existing MIME you&#39;re authoring, like &quot;tag-names &amp; properties&quot;.</li>
-<li>It has a clean and elegant syntax (grammar) that is easy to learn and requires a lot less code to produce something feasable.</li>
-<li>It is extensable, so you can define anything you want, hook it up with some key-words and define some rules of how to use your &quot;extension&quot; in the language, and that then will become part of the language as you use it.</li>
-<li>It&#39;s &quot;http sock bios&quot; (front-end) comes by default with a well defined &quot;mobile-friendly front-end grid-system&quot; and attractive (rich) visual theme (including font-icons), much like &quot;Twitter Bootstrap&quot; - only a lot more simplified, and you can override (configure, tune, extend) it per project (or per bios) as you wish.</li>
-<li>You can use your existing scripts (or frameworks) to extend (or replace) Vamp&#39;s defaults; however -this may be a bit technical and is not in the scope of this document.</li>
-</ul>
-<p>With all that in mind it&#39;s easy to see that you can use this to define almost anything: from web-sites and e-commerce web applications through to Apache-modules &amp; PHP extensions, 3D scenes, raster graphics, -you name it, -if a &quot;transpiler&quot; is not already available in the Vamp repository, you can build your own - and even sell your work to others that may need it -(or donate it free of charge, it&#39;s up to you)
-<br><br></p>
-<p><strong>Still though.. &quot;Why Vamp?&quot;</strong><br>
---because everyone has problems structuring their projects, especially large ones that may span across several servers, networks -or domains, and, businesses usually have to spend thousands (and I&#39;m talking in the hundreds) to get such a solution well structured and working, either by purchasing such a solution in a &quot;framework&quot; or having it developed, both is expensive, (especially &quot;n-Tier&quot; solutions).
-<br><br></p>
-<p><strong>..okay but what does this have to do with Vamp?</strong><br>
-Vamp is straight-forward and simple. From the ground up, everything you do in Vamp has to do with &quot;structure&quot; and &quot;context&quot;.<br>
-Every Vamp project needs its own folder -which is your &quot;project root&quot;.<br>
-The way you do things in Vamp has to do with the physical folder and file structure in this &quot;project root&quot;.</p>
-<p>This structure becomes your entire &quot;live runtime environment&quot; -but items only get loaded as refered to in your Vamp code. The items in this structure have rules on how they relate, and, they maintain their &quot;context&quot; (scope) religiosly.<br>
-With this in mind, you can see how Vamp allows you to define what-ever structure you want, but it lets you stick to the structure you define, so everything has a place.</p>
-<p><em>(KEEP READING)</em></p>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p>
-<p>Popular files and data is served directly from RAM, so this is incredibly fast, like a database, and your structure (and data) lives in the RAM (not on harddrive) where it gets updated, so it&#39;s dynamic; however, the live-structure does get &quot;saved-to-disk&quot; when it becomes &quot;unpopular&quot;, or per &quot;Save()&quot; instruction in your code.<br></p>
-<p>Internally the language utilizes &quot;memory pointers&quot; to refer to structures and data, so it does not consume too much resources at a time by passing around whole chunks of data.<br>
-The C language works this way also, hence it is incredibly fast; however, Vamp does not require you to be bothered with these &quot;pointers&quot; as it gets handled automatically.</p>
-<p>Resources external to your &quot;project root&quot;, like in a different path, (or device) is represented by a special kind of &quot;sym-link&quot; inside your project structure. An external resource can also be on a different server elsewhere; however, &quot;Save()&quot; instructions will save the data at the external resource, not locally.</p>
-<p><em>The &quot;Vamp Core&quot; is semi-open-source and free for personal use</em>, -and it comes by default with MIME extensions (transpilers) for: <code style="font-family: Liberation Mono;">HTML</code>, <code style="font-family: Liberation Mono;">CSS</code>, &amp; <code style="font-family: Liberation Mono;">JavaScript</code>.<br>
-If you want to use Vamp for your business, there are flexible payment solutions available that suit your business needs.</p>
-<p><strong>..hang on a second, I have to pay for this?</strong><br>
-No you don&#39;t; however, if you intend to make monetary profit by using it, then: yes. -It&#39;s not expensive at all and has no recurring license fees. When you purchase Vamp: upgrades are free, you also get live technical support and training videos, though, not much training is required; it is very easy to learn and quick to master.</p>
-<p>The Vamp iniative has a goal: to make enough profit to sustain the developers until Vamp is introduced into the labor markets, after that <strong>Vamp will become completely open-source AND absolutely free of charge</strong>.</p>
-<p><strong>Anyway...</strong><br>
-By now you can probably see why Vamp is not just a language, or data-base, etc, so, it&#39;s not easy to say in 1 sentence exactly what it is... It is many things.. it is 1 thing.. it is Vamp.<br>
-ALL the above was enough to confuse anyone, but, fear not, the rest of this document will make things (a bit more) clear.</p>
-<p>Vamp can save you a lot of time &amp; money, but you won&#39;t know that unless you read more, so:<br>
-READ the rest - (not skip)</p>
-<p><div class="frame">
-   <img src="/home/charl/Projects/vamp/dist/art/img/dev_life.jpg">
-</div>
-<br></p>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p>
-<h3 id="introduction">Introduction</h3>
-<p>Vamp runs as a daemon (background service API) on the host it is installed -which by default is configured to stay up and running even if the host is rebooted. This daemon manages &amp; monitors other Vamp instances, which is acessable via the command-line. Vamp instances depend on the Vamp daemon, so if the daemon dies, the instances will (gracefully) commit suicide.</p>
-<p><div class="frame">
-   <img src="/home/charl/Projects/vamp/dist/art/img/dmon_dpend.jpg">
-</div>
-<br></p>
-<p>A &quot;Vamp Project&quot; (vamp instance) is simply a folder with some Vamp file(s) inside it. Vamp file-extensions can be any of these: <code style="font-family: Liberation Mono;">.v</code> <code style="font-family: Liberation Mono;">.va</code> <code style="font-family: Liberation Mono;">.vam</code> <code style="font-family: Liberation Mono;">.vamp</code>.</p>
-<p>When you create a new Vamp project, or simply want to test some Vamp code, make sure you do this in a new (empty) folder, or a folder that contains items related to your project, because Vamp expects these as part of your project&#39;s live runtime structure; however, only the items referred to in your Vamp code will be loaded accordingly.</p>
-<p>Any &quot;item&quot; -like a file or folder (simply: &quot;node&quot;) in your project structure have &quot;aspects&quot; (attributes), some of which are automatic -which (also) deals with relationships between items in your project. These &quot;automatic-attributes&quot; (meta-aspects) also deal with how an item reacts when &quot;called&quot; -as anything in Vamp can be called (like a function). &quot;Calling&quot; operates in different ways, depending on how you define and call an item.</p>
-<p>Any &quot;node&quot; can have &quot;contents&quot; (even functions have contents -which is a list of instructions).<br>
-The contents (and aspects) of any &quot;node&quot; is directly related to that &quot;node&quot;, and its context remains within this &quot;node&quot;. This means that your &quot;runtime scope&quot; is well preserved everywhere, which is also your runtime structure. Remember this, it is very important.</p>
-<p>Vamp code closely correlates to &quot;folders &amp; files&quot; as a structure; meaning that any (live) Vamp code can be &quot;saved to disk&quot; as a &quot;tree structure&quot; -consisting of folders &amp; files that represent the functional structure and data of your live project. This makes any live Vamp project dynamically portable, -or can be used for recovery purposes.</p>
-<p><em>(KEEP READING)</em></p>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p>
-<p>Vamp has an intrinsic (built in) transmission control system, called &quot;bios&quot; (basic input output system) -which is extensible. It&#39;s IO functions have short-cut names like: <code style="font-family: Liberation Mono;">Sock</code> (socket), <code style="font-family: Liberation Mono;">Proc</code> (process), etc, -each of which have protocols -according to which default &quot;flow&quot; mechanisms control its input and output respectively. The Vamp &quot;bios&quot; and all its control systems and their protocols are by default configured and optimized for rapid development; however, they can be configured and overridden per instance during runtime.</p>
-<p><br></p>
-<p><div class="frame">
-   <img src="/home/charl/Projects/vamp/dist/art/img/tech_01.jpg">
-</div>
-<br><br></p>
-<p>Some of these &quot;bios&quot; controls automatically &quot;transpile&quot; Vamp code into the appropriate language(s) (code) for each &quot;tick&quot; (request/event) respectively; however, this automation can be configured, and, any structure (like a document) can be &quot;baked&quot; (transpiled) to be &quot;served&quot; directly; which is resource conservative. It is important to structure your Vamp projects and name your Vamp files appropriately -with compound file extensions, like: <code style="font-family: Liberation Mono;">home.html.v</code> -which makes it easy to find and identify -for yourself and Vamp.</p>
-<p>For security reasons, Vamp files cannot be &quot;served&quot; directly via any Vamp &quot;bios&quot;. If you want to do so, it has to be explicitly transpiled to &quot;plain text&quot; first.<br>
-A &quot;bios&quot; can also be used to just transpile Vamp code into other server-side (-or client side) languages, like: Python, Ruby, PHP, JavaScript, etc.</p>
-<p>Your Vamp project operates as a &quot;programmable live database&quot; -which follows your project structure, making it simple to write versatile applications that are well structured, dynamic, stable and portable. It is up to the developer to structure and scale large projects appropriately; either on the same host, or across several servers and networks with the proper security measures in place, which Vamp also supports.</p>
-<p>All of the above (and more) is done in a simple &amp; elegant syntax (grammar) that looks like a combination of: JavaScript, C, CSS, PHP, &amp; Lisp.</p>
-<p>When a Vamp file is named with a compound file extension according to the file-type (typically structured document types like HTML or CSS) it should produce, you can use the conventions (tags, selectors, properties, etc) expected for that type as you would use that language itself; however, coding that in Vamp gives you several advantages, because, not only does Vamp come with very useful &quot;nodes&quot; (and themes) of its own, --you can also make your own &quot;tags&quot; (nodes, themes, conventions, etc) which translates to the conventional output after &quot;automatic transpilation&quot; through the BIOS -as you&#39;ve defined it to be. This becomes exceedingly powerful and useful through your project(s) as you understand that now you can make up a &quot;form&quot; that is directly related to your data-structure; so validation, theming, labeling, events, etc all becomes part of your structure.</p>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p>
-<p>There is so much more to elaborate on, but this intro is getting too long, so I&#39;ll wrap it up with:</p>
-<p><strong>Runtime stability</strong><br>
-The Vamp interpreter operates much like how a web-browser renders a document. You can imagine what chaos it would be if the browser would suddenly become unstable and throw errors at the visitor if you placed a &quot;tag&quot; in the wrong place, of if the name of some style is wrong; it would be a disaster.</p>
-<p>When it comes to programming though, and something is wrong with the code, a developer needs to see exactly &quot;what is wrong&quot;. Vamp brings this together by making error messages short &amp; useful, and at the same time, only &quot;the wrong part&quot; fails, not the entire runtime; the rest will calculate &amp; render quite normally, even if you have a &quot;syntax error&quot;. This is because Vamp code is parsed by &quot;context&quot;, within &quot;context operators&quot; like: <code style="font-family: Liberation Mono;">()</code>, <code style="font-family: Liberation Mono;">{}</code>, <code style="font-family: Liberation Mono;">[]</code>.</p>
-<p>Your &quot;project root&quot; has a runtime config meta-aspect called &quot;Mode&quot;, and if this is &quot;live&quot; then if something does fail, the error message will only show a &quot;fail-type&quot; -with no description at all, like: &quot;MathFail&quot;, or &quot;CallFail&quot;, etc, even so, the message will visually be in the place where it failed, or where a &quot;fail&quot; item is displayed (without knowing it&#39;s a fail).</p>
-<p>With all the above in mind, you can see how this could save you countless hours in development time, saving volumes of manual code, prevent code duplication, minimize and handle human error gracefully.<br>
-You can imagine that this is favorable when it comes to tight deadlines and demos :)
-<br><br><br><br></p>
-<h3 id="examples">Examples</h3>
-<p>These examples below are not &quot;tutorials&quot;, but, fear not, a detailed guide for installation and a &quot;Hello World!&quot; tutorial is in the &quot;orientation&quot;; these are just so you can get a feel of what to expect, and for a firm grasp of what Vamp is about.
-<br><br></p>
-<h4 id="web-server">Web Server</h4>
-<p>Remember: in Vamp you can override &amp; configure anything; either during runtime, or in your installed Vamp setup, so from here on just accept the fact that a lot of hard work has been done for you so you can just &quot;tune&quot; &amp; control things as you wish.</p>
-<p>With the above in mind: Vamp&#39;s &quot;http sock bios&quot; by default produces appropriate &quot;HTTP message codes&quot; and some required headers, like &quot;Content-Type&quot; (mime-type) and &quot;Content-Length&quot; (byte-size).<br></p>
-<p>The context (or folder path) where any BIOS is instantiated becomes the &quot;root path&quot; of any &quot;path request&quot; on that BIOS instance.<br>
-This is for logicical structure and security reasons. Everything in Vamp works this way.<br>
-If you don&#39;t like this, then just put it somewhere else -lower down the &quot;tree&quot;, like in your &quot;project root&quot;, this way it will have &quot;read&quot; access to everything in that context by relation to the other items in there &quot;akin&quot; to itself. &quot;Write access&quot; to the items &quot;akin&quot; to itself can be achieved by defining it as such in the meta-aspects of the other items.<br>
-See this security measure as &quot;parents&quot; who can &quot;teach&quot; their own children, but others need permission for this priviledge.</p>
-<p>By now you can see how Vamp is geared towards structure, simplicity and security.</p>
-<p>In the examples that follow, for clarity and brevity, I&#39;ll assume you created a file inside your &quot;project root&quot; named: <code style="font-family: Liberation Mono;">$.v</code>, and this is the file in which we will place the code in the examples below.
-An explanation of &quot;$&quot; files is in the &quot;orientation&quot;, but for now: &quot;$&quot; simply means: &quot;self&quot;, and when a file-name starts with &quot;$&quot; -it is loaded first, and any text inbetween the &quot;$&quot; and the &quot;.v&quot; will be an aspect-name of the context in which it resides.</p>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p>
-<h6 id="automatic-web-server">Automatic Web Server</h6>
-<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#HTTP:127.0.0.1:9000</span></span><span class="meta brace round js"><span>)</span></span></span></div></pre>
-<p>The exact code above will actually produce working web-server.<br>
-I can only imagine the expression on your face... read on, you&#39;ll see :)</p>
-<p>In the example above, we created an &quot;event listener&quot; that handles &quot;http&quot; requests made to the IP addess: &quot;127.0.0.1&quot; on port: &quot;80&quot;. It will perform &quot;expressions&quot; on any path requested, based on the &quot;method&quot; of the request and the &quot;arguments&quot; (http request variables) passed along with the request.</p>
-<p>If there is a problem with the request, like if the path does not exist, or this bios instance does not have permission to read (or write, based on the request path &amp; method) it will produce an appropriate http response code (like 404, 403, etc) along with a good-looking error message.</p>
-<p>This explanation may get a little long and technical, but for now, just know that: by default it handles requests &amp; responses automatically and appropriately as it is geared towards simplicity and resource conservation. More on this is available in the &quot;bios&quot; section of this documentation.
-<br><br></p>
-<h6 id="picture-web-server">Picture Web Server</h6>
-<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#HTTP:127.0.0.1:9000</span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Mime</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace square js"><span>[</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>jpg</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span>,</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>png</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>}</span></span></span></div></pre>
-<p>The example above will only handle requests made to files with &quot;jpg&quot; &amp; &quot;png&quot; extensions.<br>
-Note that if you used both the &quot;Automatoc Web Server&quot; example together with this one, then this one will override these 2 mime-types and this example will handle it, instead of the other, because they share the same &quot;socket&quot;.
-<br><br></p>
-<h6 id="path-web-server">Path Web Server</h6>
-<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#HTTP:127.0.0.1:9000</span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Path</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace square js"><span>[</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>/docs/</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Bias</span></span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Deny</span></span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Addr</span></span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>192.*</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>47.*</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="keyword operator $1 js"><span>:</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Path</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>/docs/gossip/</span><span class="punctuation definition string end js"><span>&#39;</span></span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Mime</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace square js"><span>[</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>pdf</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;</span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="support class js"><span>Path</span></span><span class="keyword operator $1 js"><span>:</span></span><span class="meta brace square js"><span>[</span></span><span class="string quoted single js"><span class="punctuation definition string begin js"><span>&#39;</span></span><span>/docs/staff/</span><span class="punctuation definition string end js"><span>&#39;</span></span></span><span class="meta brace square js"><span>]</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace curly js"><span>}</span></span></span></div></pre>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p>
-<p>The example above will only handle requests made to the folder &quot;docs&quot; inside the context where this bios instance resides. This will override any other &quot;general&quot; http handlers related to &quot;Path&quot; on the same socket.<br></p>
-<p>This example (above) also implements specific security overrides on the &quot;127.0.0.1:9000&quot; socket over &quot;http&quot; protocol:<br>
-It denies all access from any ip address starting with &#39;192.&#39;<br>
-It denies everything in the &quot;/docs/gossip/&quot; folder -and &quot;PDF&quot; files from any ip address starting with &quot;47.&quot;<br>
-It denies any access to &quot;/docs/staff/&quot; for everyone.</p>
-<p>Of coarse you can make a separate file, like: <code style="font-family: Liberation Mono;">rules.cfg.v</code> and just assign: <code style="font-family: Liberation Mono;">Bias: rules.cfg.v</code>, or however you want; it would be preferable, especially with a long list of such rules that may be needed for other BIOS instances as well.
-<br><br></p>
-<h6 id="automatic-web-socket-server">Automatic Web-socket Server</h6>
-<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#WS:127.0.0.1:9100</span></span><span class="meta brace round js"><span>)</span></span></span></div></pre>
-<p>In the example above, the same rules apply, with similar configuration.
-<br><br><br></p>
-<h4 id="raw-socket-handler">Raw socket handler</h4>
-<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Sock</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#TCP:127.0.0.1:9200</span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="support constant js"><span>$Echo</span></span><span class="meta brace round js"><span>(</span></span><span class="support constant js"><span>$Data</span></span><span>&nbsp;</span><span class="keyword operator $1 js"><span>+</span></span><span>&nbsp;</span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>&nbsp;-back&nbsp;to&nbsp;you!</span><span class="punctuation definition string end js"><span>`</span></span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>]</span></span></span></div></pre>
-<p>The example above shows how to override the &quot;event&quot; (Tick) handler on a socket. In Vamp, &quot;Tick&quot; is a way to say &quot;next&quot; -or &quot;then&quot;.<br>
-Note that this example (above) does not specify a sub-protocol, so this means you will have to handle the raw input and output data yourself.
-<br><br><br></p>
-<h4 id="atomatic-cli-repl">Atomatic CLI REPL</h4>
-<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Proc</span></span><span class="meta brace round js"><span>(</span></span><span class="keyword control js"><span>#TTY:Root</span></span><span class="meta brace round js"><span>)</span></span></span></div></pre>
-<p>The &quot;proc bios&quot; is a mechanism that hooks into (takes over) the &quot;stdin&quot;, &quot;stdout&quot; &amp; &quot;stderr&quot; of a process and it evaluates (parse &amp; execute) any Vamp code that runs through it during runtime.<br>
-In this example: &quot;#TTY:Root&quot; refers to the main (Root) process-stream to be hooked into the current &quot;TTY&quot; (terminal). Each Vamp instance has its own &quot;Root&quot; process, so this can&#39;t be exploited to &quot;hi-jack&quot; other Vamp instances as this mechanism can only operate on processes that belong in the same project, on the same host.
-<br><br><br></p>
-<h4 id="child-process-mule">Child process :: Mule</h4>
-<p>Child processes in VAMP are called &quot;mules&quot; (workers); however, they are NOT &quot;forks&quot; of the parent process and each mule occupies 1 processing thread. As their title imply, they can&#39;t (-or rather shouldn&#39;t) have &quot;children&quot;.<br></p>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p>
-<p>Mules are typically used to either share work-load, or to do specific tasks (once-off -or persistant), -away from the main process. The main (project root) process cannot execute system commands; however, mules can, because their priviledges can be limited to only certain resources, or certain commands.</p>
-<p>Mules can only be &quot;spawned&quot; locally; they can only be commanded by the parent; they only report to their parent, and their parent manages communication between them in order to minimize any confusion -or disputes (-race conditions). Mules also report progress of tasks managed by them.</p>
-<p>Mules can be used to setup servers -remotely via SSH -or which ever command interface you prefer --from operating system installation &amp; configuration -to Vamp setup. The resources of these remote servers can become part of your main project root structure -as most of Vamp&#39;s processes are asynchronous anyway. Remote resources are managed via encrypted communication channels.</p>
-<p>When a mule is done with its work -or if it fails, it dies. When a mule dies, its parent is notified via its messaging channel, which will either be a detailed &quot;Done&quot; -or &quot;Fail&quot; message.</p>
-<p>Mules can &quot;fail&quot; under various conditions: if it&#39;s commands encounter a fatal error, or when its &quot;time-limit&quot; is exceeded, or if it &quot;fatigues&quot; the host system by occupying too much CPU for too long, or too much RAM (for too long), or too much disk space, too much band-width, etc. Each of these limits have defaults set in the main Vamp installation config, which can be overridden upon initialization of any mule -or can be set in the project root config of each project; however, the maximum limits set in the Vamp installation config cannot be overridden during runtine, they will just default to the limits if exceeded. These maximum limits are percentages and &quot;fatigue time limits&quot; which by default is set to allow for maximum (sane) usage; alas, these protect your runtime environment against resource abuse such as &quot;fork bombs&quot; &amp; &quot;DDos attacks&quot;.</p>
-<pre class="editor-colors lang-vamp"><div class="line"><span class="source vamp"><span class="support class js"><span>Mule</span></span><span class="meta brace round js"><span>(</span></span><span>exec</span><span class="keyword operator $1 js"><span>:</span></span><span class="string quoted template js"><span class="punctuation definition string begin js"><span>`</span></span><span>echo&nbsp;&quot;blah&quot;</span><span class="punctuation definition string end js"><span>`</span></span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>[</span></span></span></div><div class="line"><span class="source vamp"><span>&nbsp;&nbsp;&nbsp;</span><span class="support constant js"><span>$Done</span></span><span class="meta brace round js"><span>(</span></span><span class="constant numeric js"><span>0</span></span><span class="meta brace round js"><span>)</span></span></span></div><div class="line"><span class="source vamp"><span class="meta brace square js"><span>]</span></span></span></div></pre>
-<hr>
-<p><br></p>
-<h2 id="conclusion">Conclusion</h2>
-<p>This &quot;synopsis&quot; was both too long and way too short. There is so much more to Vamp, but this you will have to discover in the rest of this documentation; however, I hope it helped with understanding more about Vamp, even though it was a lot of text to read; thanks for not giving up.</p>
-<p>There is no doubt that Vamp is versatile and powerful. A little code goes a long way. Your structure is your empire that could span securely across multiple networks across different continents. With this kind of flexibility, scalability, stability, speed of development and mass deployment; the things you can do with Vamp is nothing short of astounding.</p>
-<p>Next up is the &quot;orientation&quot;, so grab a drink &amp; some crisps; you&#39;re about to unveil a geek-adventure filled with might &amp; magic!</p>
-<hr>
-<p><br></p>
-<p><div class="pageNext"></div></p>
-<p><div class="pageHead"></div>
-<br></p></body>
+<pane>
+   <img src="C:\Users\Amageza\Downloads\vamp\docs\_\img\crazy_01.jpg">
+</pane></body>
 </html>

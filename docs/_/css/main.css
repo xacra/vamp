@@ -2,11 +2,11 @@
    {
       font-family: Arial, Helvitica, Sans;
       font-size:13px !important;
-      background: url('../../art/img/bg_texture.jpg') !important;
+      background: url('../../_/img/bg_texture.jpg') !important;
    }
 
    hr
-   { border: none; }
+   { border: none !important; }
 
    .frame
    {
