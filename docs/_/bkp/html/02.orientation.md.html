@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>02.orientation</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); overflow: auto; background-color: rgb(29, 31, 33); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); background-color: rgb(48, 51, 55); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-preview code { text-shadow: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+pre.editor-colors,
+.host {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
+}
+pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #292c2f;
+}
+pre.editor-colors .gutter .cursor-line,
+.host .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .line-number.cursor-line-no-selection,
+.host .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #fba0e3;
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-color: #ffffff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #444444;
+}
+pre.editor-colors .source.gfm,
+.host .source.gfm {
+  color: #999;
+}
+pre.editor-colors .gfm .markup.heading,
+.host .gfm .markup.heading {
+  color: #eee;
+}
+pre.editor-colors .gfm .link,
+.host .gfm .link {
+  color: #555;
+}
+pre.editor-colors .gfm .variable.list,
+.host .gfm .variable.list,
+pre.editor-colors .gfm .support.quote,
+.host .gfm .support.quote {
+  color: #555;
+}
+pre.editor-colors .gfm .link .entity,
+.host .gfm .link .entity {
+  color: #ddd;
+}
+pre.editor-colors .gfm .raw,
+.host .gfm .raw {
+  color: #aaa;
+}
+pre.editor-colors .markdown .paragraph,
+.host .markdown .paragraph {
+  color: #999;
+}
+pre.editor-colors .markdown .heading,
+.host .markdown .heading {
+  color: #eee;
+}
+pre.editor-colors .markdown .raw,
+.host .markdown .raw {
+  color: #aaa;
+}
+pre.editor-colors .markdown .link,
+.host .markdown .link {
+  color: #555;
+}
+pre.editor-colors .markdown .link .string,
+.host .markdown .link .string {
+  color: #555;
+}
+pre.editor-colors .markdown .link .string.title,
+.host .markdown .link .string.title {
+  color: #ddd;
+}
+.bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}
+.comment {
+  color: #7C7C7C;
+}
+.entity {
+  color: #FFD2A7;
+}
+.entity.name.type {
+  text-decoration: underline;
+  color: #FFFFB6;
+}
+.entity.other.inherited-class {
+  color: #9B5C2E;
+}
+.keyword {
+  color: #96CBFE;
+}
+.keyword.control {
+  color: #96CBFE;
+}
+.keyword.operator {
+  color: #EDEDED;
+}
+.storage {
+  color: #CFCB90;
+}
+.storage.modifier {
+  color: #96CBFE;
+}
+.constant {
+  color: #99CC99;
+}
+.constant.numeric {
+  color: #FF73FD;
+}
+.variable {
+  color: #C6C5FE;
+}
+.invalid.deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.invalid.illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.string .source,
+.string .meta.embedded.line {
+  color: #EDEDED;
+}
+.string .punctuation.section.embedded {
+  color: #00A0A0;
+}
+.string .punctuation.section.embedded .source {
+  color: #00A0A0;
+}
+.string {
+  color: #A8FF60;
+}
+.string .constant {
+  color: #00A0A0;
+}
+.string.regexp {
+  color: #E9C062;
+}
+.string.regexp .constant.character.escape,
+.string.regexp .source.ruby.embedded,
+.string.regexp .string.regexp.arbitrary-repetition {
+  color: #FF8000;
+}
+.string.regexp.group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.string.regexp.character-class {
+  color: #B18A3D;
+}
+.string .variable {
+  color: #8A9A95;
+}
+.support {
+  color: #FFFFB6;
+}
+.support.function {
+  color: #DAD085;
+}
+.support.constant {
+  color: #FFD2A7;
+}
+.support.type.property-name.css {
+  color: #EDEDED;
+}
+.source .entity.name.tag,
+.source .punctuation.tag {
+  color: #96CBFE;
+}
+.source .entity.other.attribute-name {
+  color: #C6C5FE;
+}
+.entity.other.attribute-name {
+  color: #C6C5FE;
+}
+.entity.name.tag.namespace,
+.entity.other.attribute-name.namespace {
+  color: #E18964;
+}
+.meta.preprocessor.c {
+  color: #8996A8;
+}
+.meta.preprocessor.c .keyword {
+  color: #AFC4DB;
+}
+.meta.cast {
+  color: #676767;
+}
+.meta.sgml.html .meta.doctype,
+.meta.sgml.html .meta.doctype .entity,
+.meta.sgml.html .meta.doctype .string,
+.meta.xml-processing,
+.meta.xml-processing .entity,
+.meta.xml-processing .string {
+  color: #494949;
+}
+.meta.tag .entity,
+.meta.tag > .punctuation,
+.meta.tag.inline .entity {
+  color: #C6C5FE;
+}
+.meta.tag .name,
+.meta.tag.inline .name,
+.meta.tag > .punctuation {
+  color: #96CBFE;
+}
+.meta.selector.css .entity.name.tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.meta.selector.css .entity.other.attribute-name.tag.pseudo-class {
+  color: #8F9D6A;
+}
+.meta.selector.css .entity.other.attribute-name.id {
+  color: #8B98AB;
+}
+.meta.selector.css .entity.other.attribute-name.class {
+  color: #62B1FE;
+}
+.meta.property-group .support.constant.property-value.css,
+.meta.property-value .support.constant.property-value.css {
+  color: #F9EE98;
+}
+.meta.preprocessor.at-rule .keyword.control.at-rule {
+  color: #8693A5;
+}
+.meta.property-value .support.constant.named-color.css,
+.meta.property-value .constant {
+  color: #87C38A;
+}
+.meta.constructor.argument.css {
+  color: #8F9D6A;
+}
+.meta.diff,
+.meta.diff.header {
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.meta.separator {
+  color: #60A633;
+  background-color: #242424;
+}
+.meta.line.entry.logfile,
+.meta.line.exit.logfile {
+  background-color: rgba(238, 238, 238, 0.16);
+}
+.meta.line.error.logfile {
+  background-color: #751012;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><style>
+   body
+   {
+      font-family: Arial, Helvitica, Sans;
+      font-size:13px !important;
+      background: url('../../art/img/bg_texture.jpg') !important;
+   }
+
+   hr
+   { border: none; }
+
+   .frame
+   {
+      display: inline-block;
+      background: rgba(100,100,100,0.15);
+      padding:12px;
+      text-align:center;
+      vertical-align:top;
+      border: 1px solid rgba(128,128,128,0.3);
+      border-radius: 5px;
+      margin: 15px;
+   }
+
+   .span
+   { display:block; }
+
+   .info
+   {
+      display:block;
+      font-style:italic;
+      font-size:12px;
+      padding-left:15px;
+   }
+
+   .bigTxt
+   {
+      display:inline-block;
+      vertical-align:top;
+      font-size:40px;
+      line-height:60px;
+      padding-left:10px;
+      padding-right:10px;
+   }
+
+   .pageNext
+   { margin-bottom:800px; }
+
+   .pageHead
+   { height:30px; }
+
+</style>
+
+<p><br></p>
+<h1 id="vamp-orientation">VAMP - Orientation</h1>
+<h4 id="v-e-r-s-a-t-i-l-e-nbsp-nbsp-a-p-p-l-i-c-a-t-i-o-n-nbsp-nbsp-m-e-t-a-p-r-o-g-r-a-m-m-i-n-g">V e r s a t i l e &nbsp;&nbsp; A p p l i c a t i o n &nbsp;&nbsp; M e t a - P r o g r a m m i n g</h4>
+<hr>
+<p><br></p>
+<h2 id="introduction">Introduction</h2>
+<p>As its acronym suggests, VAMP is indeed versatile.<br>
+This document is to familiarize yourself with the basics, installing VAMP, and make a &quot;Hello World!&quot; app.<br>
+However tedious it may seem reading through some of the text below, take your time, it won&#39;t hurt &nbsp; :)</p>
+<p>The default VAMP setup may seem larger in file-size than some &quot;normal&quot; programming languages; however, in comparrison with software stacks such as the infamous &quot;LAMP&quot;, &nbsp; -VAMP&#39;s default &quot;package&quot; size is close in comparison.</p>
+<p>What you get with the VAMP package -and what you can do with it, well...</p>
+<p><div class="frame">
+   <img src="/home/charl/Projects/vamp/dist/art/img/big_head.jpg">
+</div>
+<br><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h3 id="about-vamp">About VAMP</h3>
+<p>Here&#39;s a few things you should know:</p>
+<ul>
+<li>it has an interpreter, a compiler, and a transpiler -which are all configurable &amp; extensible</li>
+<li>it can transpile any mime-type it has a mime-library extension for</li>
+<li>it is securely scalable across several projects, servers -or domains, for n-tier software architecture</li>
+<li>it can be used for both server-side &amp; client side and its syntax is clean &amp; easy to learn</li>
+<li>it can create, read &amp; listen on any permissible resource, path, socket, &amp; child-process</li>
+<li>it can be used as an active database, or used for programming, configuration and content authoring</li>
+<li>it has a configurable &quot;view&quot; mechanism, both for CLI &amp; GUI - which have similar instructions</li>
+<li>it is built to be stable, so it will not crash (under normal conditions)</li>
+<li>it runs in its own directory which is your runtime &quot;project root&quot; &amp; every project has its own daemon</li>
+<li>its directory and file structure is part of the live runtime structure where folders are &quot;nodes&quot; (objects)</li>
+<li>structures (like &quot;nodes&quot;) can be defined inside VAMP files, not only folders</li>
+<li>its structure is loaded at &quot;boot time&quot; and lives in memory; more on this in a bit, keep reading</li>
+<li>the live structure entities (and attributes) are referenced as &quot;pointers&quot;, so it runs fast</li>
+<li>anything in the runtime has &quot;meta-attributes&quot;, called &quot;aspects&quot; some of which are &quot;intrinsic&quot;</li>
+<li>the intrinsic concepts &amp; aspects are designed for rapid prototyping and development</li>
+<li>the mathematical expressions are designed to be &quot;safe&quot;, so it handles things like &quot;devision by zero&quot; well</li>
+<li>the aritmetic operators handle any data-type, -not only numbers
+<br></li>
+</ul>
+<p>The power of VAMP is in its structure, expressive language, simplicity, useful concepts, extensibility, portability, and runtime stability; alas -it is up to the systems engineer to lay out the proper architecture.<br>
+VAMP is not a &quot;framework&quot;. It sticks with the structure you define, so it is only as complex as your own structure. The structure you define is your folders &amp; files, together with their relationships with one-another.</p>
+<p>.. but hang on a second.. - no frameworks?<br>
+YES! - Why let your creative thinking be handicapped by limited ideologies?</p>
+<p><div class="frame">
+   <img src="/home/charl/Projects/vamp/dist/art/img/that_bs.jpg">
+</div>
+<br></p>
+<p>You create your structure; VAMP lets you stick to it; -unless you explicitly need your structure mutable during runtime; which is also supported.<br>
+Of coarse you can make a &quot;framework&quot; -or &quot;boiler-plate&quot; with VAMP, all this means is that with VAMP you don&#39;t really need a bulky framework to get things done as it has a lot of useful tools and methods built into the language and its libraries, which are extensible.
+The point here is: &quot;freedom with rules&quot;, and you are the author of these &quot;rules&quot; - or rather: &quot;structure&quot;.
+<br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h3 id="extensibility">Extensibility</h3>
+<p>VAMP&#39;s default mime-type library comes with transpilers for:</p>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>PlainText</li>
+</ul>
+<p>The mime library can be extented either by installing it from the repository, or building your own.<br>
+The punch-line here is that you can code in one language and have your instructions translated (or compiled) to any other mime-type, depending on what you&#39;re authoring and what the target platform is of coarse.</p>
+<p>So what&#39;s the big deal?<br>
+Well, as we all know, some languages are great for some things and others are better at other things, depending on what you need to do, or on which platform it should be done on; however, these languages have different syntax, and some languages have the power with which you can blow your foot off, or do something really interesting - if done right.</p>
+<p>Now, using the &quot;best practices&quot; &amp; the right tools for whatever language you&#39;re authoring may become tricky and most of the time -developers make &quot;boiler-plates&quot; in which ever language they use so they can have handy tools at their disposal during new project development, or maintenance work.</p>
+<p>Wouldn&#39;t it be great if we could have a language that bring these tools together, for which ever language, and you use one language to program a dozen other languages - at once? A language that does not get in your way, but is expressive and extensible, so you do not need to repeat yourself all the time.</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/creative.jpg">
+</div>
+<br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<p>You can also compile your VAMP project into a stand-alone exectutable; which could be anything, from a systems API or service, a plug-in or module for another service -to native desktop GUI applications.<br>
+Depending on your development setup, the VAMP compiler can compile executable that runs natively on Linux, OSX &amp; Windows.<br></p>
+<p><div class="frame">
+   <img src="/home/charl/Projects/vamp/dist/art/ico/mime/application-x-executable.png">
+   <div class="bigTxt">=</div>
+   <img src="/home/charl/Projects/vamp/dist/art/ico/logo/linux.png">
+   <img src="/home/charl/Projects/vamp/dist/art/ico/logo/apple.png">
+   <img src="/home/charl/Projects/vamp/dist/art/ico/logo/wind.png">
+</div>
+<span class="info">above :: illustration of VAMP&#39;s native binary compatible platforms</span></p>
+<p>So based on the fact that we can extend any VAMP feature, and also create &amp; edit its mime-libraries; it means that you can make a &quot;boiler-plate&quot; once, tell VAMP how to use it and which words relate to what and use it anywhere in your future VAMP projects.</p>
+<p>By &quot;anywhere&quot; I really mean it: server back-end, data-base, web interface, native desktop GUI apps; -even interactive 3D web applications -or installable 3D games; videos with syncronized audio &amp; sub-titles; still images with super-imposed overlays, etc, etc..</p>
+<p>It is important to know that this is in deed possible, but VAMP does not come with these compilers &amp; transpilers by default, so, if it exists in the VAMP repo, by all means, help yourself, otherwize, buy it, -or get someone to develop it, or build it yourself - then sell it - or donate it to the VAMP repository for free, if you want :)</p>
+<p>However you decide how to use VAMP is up to you. The point is that it&#39;s an incredibly powerful system, that is easy to learn, simple to use, easy to extend, and applicable anywhere.
+<br><br></p>
+<h3 id="structure">Structure</h3>
+<p>VAMP is all about structure. From your project&#39;s folders &amp; files to the code in those files - it is all used as a whole.<br>
+Its content operators shows very close correlation between folder-tree and VAMP code.<br>Here&#39;s an example:</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/01.path_as_code.png">
+</div>
+<span class="info">above :: illustration of folder-tree structure in correlation with VAMP code</span>
+<br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h3 id="view-gui-cli">View - GUI &amp; CLI</h3>
+<p>VAMP comes default with configurable &amp; programmable &quot;view&quot; mechanisms that use the same methods to &quot;show&quot; things to the user. This is directly related to VAMP&#39;s &quot;Bios&quot; (basic input-output system).</p>
+<p>The GUI part is available for both web browsers and native desktop applications, depending if you compile your project to native binary -or run it as a server/service on the internet.<br></p>
+<p><div class="frame">
+   <img src="/home/charl/Projects/vamp/dist/art/img/01.web_view.png">
+</div>
+<span class="info">above :: VAMP&#39;s default GUI web browser compatiblity list</span>
+<br><br></p>
+<p>The CLI part is for system administrators and hardcore devls (developers). It can be used to create -or manage projects on the fly. The VAMP runtime supports &quot;hot-loading&quot;, so you do not need to restart your project daemon when minor changes are made to the structure; remember, it works like a data-base; you don&#39;t need to restart a database if you insert or delete information, that would be quite pointless :)</p>
+<p>When working with the CLI you have a lot of power though. You can &quot;save&quot; the new structures you create in code -to disk, -where you also have the option to save it as a &quot;vamp file&quot; or tree structure. This is covered later.
+<br></p>
+<p><div class="frame">
+   <img src="/home/charl/Projects/vamp/dist/art/img/terminal.png">
+   <img src="/home/charl/Projects/vamp/dist/art/img/cli_control.png">
+</div>
+<br><br></p>
+<p>The VAMP Bios (basic input - output system) adapts its input and output according to the transmission used; however, the developer does not need to apply a different way of sending messages, or reading input to and from any of these. This can be configured -per Bios; you have the freedom to customize pretty much anything.<br></p>
+<p>This needs elaboration, but I hope this introduction shared enough info to inspire your into reading the rest -and start using VAMP!</p>
+<hr>
+<p><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h2 id="installation">Installation</h2>
+<p>VAMP can be installed from its repository here: <a href="https://github.com/xacra/vamp">https://github.com/xacra/vamp</a><br>
+Navigate to the <code style="font-family: Liberation Mono;">dist/bin</code> folder, in which you will find a list of folders named according to the supported operating systems.</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/01.vamp_setup.png">
+</div>
+<span class="info">above :: the VAMP repository on GitHub</span>
+<br></p>
+<h4 id="linux">Linux</h4>
+<ul>
+<li>Download the <code style="font-family: Liberation Mono;">vampSetup.sh</code> file from the <code style="font-family: Liberation Mono;">linux</code> folder.</li>
+<li>From the terminal, navigate to where it downloaded and make sure it is executable.</li>
+<li>Type: <code style="font-family: Liberation Mono;">./vampSetup.sh</code> and follow the prompts.</li>
+<li>To test if VAMP was sucessfully installed, type: <code style="font-family: Liberation Mono;">vamp -v</code> and you should see something like: <code style="font-family: Liberation Mono;">0.1.0</code></li>
+</ul>
+<p><br></p>
+<h4 id="osx-windows">OSX &amp; Windows</h4>
+<ul>
+<li>Coming soon!</li>
+</ul>
+<hr>
+<p><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h2 id="development-environment">Development Environment</h2>
+<p>VAMP does not require a specific development environment at all. You can simply install VAMP on which ever host-machine you want and use a plain text editor for coding, and a terminal to run or compile your projects; however if you&#39;re serious about your work you should at least run your test server on a separate host (or virtual machine) - and use some a proper text editor for programming.</p>
+<p>Throughout this documentation, the file extension: <code style="font-family: Liberation Mono;">.v</code> is used for &quot;vamp&quot; files. Your local machine&#39;s operating system may already have the &quot;.v&quot; file extension associated with some other application; however, you do not need to use the <code style="font-family: Liberation Mono;">.v</code> file extension exclusively; - see the &quot;Hello World&quot; section below for more info on which alternative file extensions to use.</p>
+<p>File extensions in VAMP are important. Not only is it easy to spot for a human, but also, the VAMP interpreter can recognize combination file extensions, like: <code style="font-family: Liberation Mono;">style.css.v</code> and process it &quot;explicitly&quot;; -where if the <code style="font-family: Liberation Mono;">.css.</code> part is missing, then it is processed &quot;implicitly&quot; - which could be slower.<br>
+If you have the VAMP SDK package installed, the icons in your local file browser will show recognizable icons for VAMP files, and combinations also.</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/workspace.jpg">
+</div>
+<br><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h3 id="virtual-machine">Virtual machine</h3>
+<p>There are many VM solutions out there, the solution I recommend is using <code style="font-family: Liberation Mono;">VirtualBox</code> with <code style="font-family: Liberation Mono;">Arch Linux</code> running on a machine you configured; but you can use anything you like.</p>
+<p>To take advantage of &quot;compiling&quot; it is recommended that you assign at least 2 virtual CPU&#39;s to your VM -with at least 2Gb of RAM. The machine does not need a GUI, so you can just use a minimal installation and set it up the way you want. You can also launch your VBox &quot;headless&quot; (without a &quot;window&quot;) from the terminal and have it run in the background.</p>
+<p>You can also &quot;mount&quot; a folder (path) which is on your virtual machine into a folder of your local machine. This is very useful for quick navigation, screen-shots, etc - using your local machine&#39;s file-manager to manage files &amp; folders on your Vbox.</p>
+<p>Consult the internet for more info on this as there are plenty tutorials on how to do these things - which is not in the scope of this document, but I thought it&#39;s worth mentioning to have something that &quot;just works&quot; without much hassle. It is very useful; not only for VAMP, but for your other projects as well.</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/01.vamp_vbox.png">
+</div>
+<span class="info">above :: VirtualBox</span>
+<br><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h3 id="syntax-highlighting">Syntax highlighting</h3>
+<p>It is important that your text editor supports syntax highlighting of some kind as it makes it easier to identify what your&#39;re typing.</p>
+<p>If your text editor does not support VAMP syntax by default, there may be a syntax highlighting package for your editor  in the VAMP repository.<br>
+Have a look here: <a href="https://github.com/xacra/vamp/tree/master/devl/ext/editor">https://github.com/xacra/vamp/tree/master/devl/ext/editor</a></p>
+<p>At the time of this writing there is a syntax highlighting package available for <code style="font-family: Liberation Mono;">Atom</code>, so you can just install it.</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/01.vamp_atom.png">
+</div>
+<span class="info">above :: VAMP syntax highlighting in Atom</span></p>
+<hr>
+<p><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<h2 id="hello-world">Hello World</h2>
+<p>This excercize is actually very quick, but for the sake of getting a firm grasp of VAMP, we&#39;ll take it step by step.<br>
+Note that you do not need to do the &quot;mounting&quot; thing, and you also do not need the VAMP SDK;  these are just to make things more &quot;user friendly&quot; for yourself while you develop VAMP projects.
+<br><br></p>
+<p>Before you dive in, read the following first - so you know exactly what to expect:</p>
+<ol>
+<li>Any VAMP project needs its own folder (which defines the runtime scope)</li>
+<li>VAMP files can have any of the following file extensions: <code style="font-family: Liberation Mono;">.v</code> <code style="font-family: Liberation Mono;">.va</code> <code style="font-family: Liberation Mono;">.vam</code> <code style="font-family: Liberation Mono;">.vamp</code></li>
+<li><code style="font-family: Liberation Mono;">$</code> (meta) files are optional, but mandatory in <code style="font-family: Liberation Mono;">project root</code> and refer to the folder they are in</li>
+<li><code style="font-family: Liberation Mono;">$</code> files are the only files that get loaded automatically, and this happens in alphabetical order</li>
+<li>the contents of VAMP files are statements in the context of the file-name and folder hierarchy</li>
+<li>statements are evaluated by context, parsed from left-to-right and top-to-bottom</li>
+<li>the return value of any context is determined implicitly or explicitly
+<br><br></li>
+</ol>
+<p>For clarity &amp; brevity, I&#39;ll assume the following:</p>
+<ul>
+<li>you have installed VAMP on your development server and have installed the VAMP SDK on your local machine;</li>
+<li>you&#39;re using a <code style="font-family: Liberation Mono;">Linux</code> machine as project server (where VAMP is installed);</li>
+<li>you have mounted the folder path of this server in which your VAMP projects will reside --into your local file-system;</li>
+<li>you either have a terminal window open that is connected to this dev server via SSH, or you&#39;re using a rich IDE with SSH support -OR -simply just the open VBOX window that runs your dev server.</li>
+<li>your text editor (or IDE) supports navigating file systems.
+<br><br></li>
+</ul>
+<p>With all the above in in mind, it&#39;s time to kick some booty!</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/got_real.png">
+</div>
+<br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<p><strong>Let&#39;s get started:</strong></p>
+<ul>
+<li>Within the target file-system, navigate to your main projects (plural) container (folder).</li>
+<li>Create a new folder in there, so the path to it will be something like: <code style="font-family: Liberation Mono;">/srv/vamp/example.com</code><br></li>
+<li>Inside this <code style="font-family: Liberation Mono;">example.com</code> folder, create a text file named: <code style="font-family: Liberation Mono;">$.v</code> (take note of the file extension)</li>
+</ul>
+<p>Your <code style="font-family: Liberation Mono;">project root</code> structure of &quot;example.com&quot; should look something like this:</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/01.demo_path.png">
+</div>
+<span class="info">above :: project root of &quot;example.com&quot;</span>
+<br><br></p>
+<p>Using your editor, open the <code style="font-family: Liberation Mono;">$.v</code> file and inside it, type the code you see in the image below, and <strong>save</strong>.<br></p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/hello_world.png">
+</div>
+<span class="info">above :: project: &quot;example.com&quot;</span>
+<br><br></p>
+<p><div class="pageNext"></div></p>
+<p><div class="pageHead"></div>
+<br></p>
+<p><strong>Testing</strong></p>
+<p>To run your project, use your connected SSH interface (terminal) -or VBox window, and inside it type something like:<br>
+<code style="font-family: Liberation Mono;">vamp init /srv/vamp/example.com</code> and hit &quot;enter&quot; (or return) on your keyboard.</p>
+<p>If all went well, you should see something like this:</p>
+<p><div class="frame span">
+   <img src="/home/charl/Projects/vamp/dist/art/img/01.demo_init.png">
+</div>
+<span class="info">above :: project: &quot;example.com&quot; output</span>
+<br></p>
+<p>If your results are not as above, then consult the &quot;troubleShoot&quot; doc, but if all is good, then:<br>
+Congrads!
+<br><br></p>
+<p><div class="frame">
+   <img src="/home/charl/Projects/vamp/dist/art/img/well_done.jpg">
+</div>
+<br></p>
+<hr>
+<p><br></p></body>
+</html>
